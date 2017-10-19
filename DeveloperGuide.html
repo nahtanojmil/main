@@ -45,8 +45,9 @@
 <li><a href="#implementation">3. Implementation</a>
 <ul class="sectlevel2">
 <li><a href="#undo-redo-mechanism">3.1. Undo/Redo mechanism</a></li>
-<li><a href="#logging">3.2. Logging</a></li>
-<li><a href="#configuration">3.3. Configuration</a></li>
+<li><a href="#add-student-parent-phone-contact-mechanism">3.2. Add student/parent phone contact mechanism</a></li>
+<li><a href="#logging">3.3. Logging</a></li>
+<li><a href="#configuration">3.4. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a>
@@ -117,7 +118,7 @@ This app will not work with earlier versions of Java 8.
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-IntelliJ by default has Gradle and JavaFx plugins installed.<br>
+IntelliJ by default has <a href="#Gradle">Gradle</a> and JavaFx plugins installed.<br>
 Do not disable them. If you have disabled them, go to <code>File</code> &gt; <code>Settings</code> &gt; <code>Plugins</code> to re-enable them.
 </td>
 </tr>
@@ -225,7 +226,7 @@ This will generate all resources required by the application and tests.</p>
 <div class="sect3">
 <h4 id="setting-up-ci"><a class="link" href="#setting-up-ci">1.4.3. Setting up CI</a></h4>
 <div class="paragraph">
-<p>Set up Travis to perform Continuous Integration (CI) for your fork. See <a href="UsingTravis.html">UsingTravis.adoc</a> to learn how to set it up.</p>
+<p>Set up <a href="#Travis_CI">Travis</a> to perform Continuous Integration (CI) for your fork. See <a href="UsingTravis.html">UsingTravis.adoc</a> to learn how to set it up.</p>
 </div>
 <div class="paragraph">
 <p>Optionally, you can set up AppVeyor as a second CI (see <a href="UsingAppVeyor.html">UsingAppVeyor.adoc</a>).</p>
@@ -341,7 +342,7 @@ The <code>.pptx</code> files used to create diagrams in this document can be fou
 <div class="ulist">
 <ul>
 <li>
-<p>Defines its <em>API</em> in an <code>interface</code> with the same name as the Component.</p>
+<p>Defines its <a href="#API"><em>API</em></a> in an <code>interface</code> with the same name as the Component.</p>
 </li>
 <li>
 <p>Exposes its functionality using a <code>{Component Name}Manager</code> class.</p>
@@ -767,7 +768,111 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.2. Logging</a></h3>
+<h3 id="add-student-parent-phone-contact-mechanism"><a class="link" href="#add-student-parent-phone-contact-mechanism">3.2. Add student/parent phone contact mechanism</a></h3>
+<div class="paragraph">
+<p>The student/parent phone contact mechanism is facilitated by making changes
+to the Phone class in the model component. It enables the input
+of the phone contact information of the student and his/her parent.</p>
+</div>
+<div class="paragraph">
+<p>To ensure consistency across the user inputs for add command, users have to input p/ student/(STUDENT_NUMBER) parent/(PARENT_NUMBER)
+instead of p/ Student: (STUDENT_NUMBER) Parent: (PARENT_NUMBER).</p>
+</div>
+<div class="paragraph">
+<p>The following method replaces <code>/</code> with <code>:<code></code></code>, <code>s</code> with <code>S</code>, and <code>p</code> with <code>P</code> in the user input string
+for appropriate presentation of <code>displayed person card phone information</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="directive">static</span> <span class="predefined-type">String</span> changeToAppropriateUiFormat(<span class="predefined-type">String</span> value) {
+        value = value.replace(<span class="string"><span class="delimiter">&quot;</span><span class="content">/</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">: </span><span class="delimiter">&quot;</span></span>);
+        value = value.replace(<span class="string"><span class="delimiter">&quot;</span><span class="content">s</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">S</span><span class="delimiter">&quot;</span></span>);
+        value = value.replace(<span class="string"><span class="delimiter">&quot;</span><span class="content">p</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">P</span><span class="delimiter">&quot;</span></span>);
+        <span class="keyword">return</span> value;
+    }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Validity of the <code>displayed person card phone information</code> is checked in the following method in the Phone class:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="directive">static</span> <span class="type">boolean</span> isValidPhone(<span class="predefined-type">String</span> test) {
+        <span class="keyword">return</span> test.matches(PHONE_VALIDATION_REGEX);
+    }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where the <code>PHONE_VALIDATION_REGEX</code> refers to:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="directive">static</span> <span class="directive">final</span> <span class="predefined-type">String</span> PHONE_VALIDATION_REGEX =
+<span class="string"><span class="delimiter">&quot;</span><span class="content">(Student: )(</span><span class="char">\\</span><span class="content">d</span><span class="char">\\</span><span class="content">d</span><span class="char">\\</span><span class="content">d</span><span class="char">\\</span><span class="content">d</span><span class="char">\\</span><span class="content">d</span><span class="char">\\</span><span class="content">d</span><span class="char">\\</span><span class="content">d</span><span class="char">\\</span><span class="content">d)( Parent: )(</span><span class="char">\\</span><span class="content">d</span><span class="char">\\</span><span class="content">d</span><span class="char">\\</span><span class="content">d</span><span class="char">\\</span><span class="content">d</span><span class="char">\\</span><span class="content">d</span><span class="char">\\</span><span class="content">d</span><span class="char">\\</span><span class="content">d</span><span class="char">\\</span><span class="content">d)</span><span class="delimiter">&quot;</span></span>;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The regex ensures that the string for <code>displayed person card phone information</code> adheres to the
+correct format of <code>Student: (STUDENT_NUMBER) Parent: (PARENT_NUMBER)</code>, and that the
+phone numbers must be exactly 8 digits long.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/PhoneDisplay.png" alt="PhoneDisplay" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>If the string format for <code>displayed person card phone information</code> is valid, the
+phone contact information of the student and his/her parent will be displayed
+below the student&#8217;s name in the person card as seen in the picture above.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/message_constraint.png" alt="message constraint" width="1100">
+</div>
+</div>
+<div class="paragraph">
+<p>If the string format for <code>displayed person card phone information</code> is invalid: an IllegalValueException
+is thrown. Prompting the user to enter the correct format as seen in the picture above.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> Phone(<span class="predefined-type">String</span> phone) <span class="directive">throws</span> IllegalValueException {
+        requireNonNull(phone);
+        <span class="predefined-type">String</span> trimmedPhone = phone.trim();
+        trimmedPhone = changeToAppropriateUiFormat(trimmedPhone);
+        <span class="keyword">if</span> (!isValidPhone(trimmedPhone)) {
+            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalValueException(MESSAGE_PHONE_CONSTRAINTS);
+        }
+        <span class="local-variable">this</span>.value = trimmedPhone;
+    }</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.2.1. Design Considerations</a></h4>
+<div class="paragraph">
+<p><strong>Aspect:</strong> Phone numbers <br>
+<strong>Alternative 1 (current choice):</strong> Both the student&#8217;s phone number and their parent&#8217;s phone number is a single string.<br>
+<strong>Pros:</strong> Easy to implement as separate classes for student&#8217;s phone and parent&#8217;s phone is not required.<br>
+<strong>Cons:</strong> Harder to implement features that require solely the student&#8217;s number or parent&#8217;s number.<br>
+<strong>Alternative 2:</strong> Have a phoneStudent class for student&#8217;s phone number and phoneParent class for parent&#8217;s phone number.<br>
+<strong>Pros:</strong> Can edit properties of the student&#8217;s phone number or parent&#8217;s phone number separately.<br>
+<strong>Cons:</strong> Harder to implement as now there will be two phone classes instead of one.<br></p>
+</div>
+<hr>
+<div class="paragraph">
+<p><strong>Aspect:</strong> Validity of phone number<br>
+<strong>Alternative 1 (current choice):</strong> Only allow numbers that are exactly 8 digits long.<br>
+<strong>Pros:</strong> Ensures consistency across all phone numbers.<br>
+<strong>Cons:</strong> Student&#8217;s parents might not have foreign numbers that are not exactly 8 digits long.<br>
+<strong>Alternative 2:</strong> Modify phone validity regex to allow any length of phone numbers.<br>
+<strong>Pros:</strong> Able to have phone numbers that are local or non-local.<br>
+<strong>Cons:</strong> Inconsistent phone lengths displayed, might look very messy.<br></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="logging"><a class="link" href="#logging">3.3. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
@@ -805,7 +910,7 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 </div>
 </div>
 <div class="sect2">
-<h3 id="configuration"><a class="link" href="#configuration">3.3. Configuration</a></h3>
+<h3 id="configuration"><a class="link" href="#configuration">3.4. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g App name, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -899,7 +1004,7 @@ The most reliable way to run tests is the 3rd one. The first two methods might f
 </table>
 </div>
 <div class="paragraph">
-<p><strong>Method 1: Using IntelliJ JUnit test runner</strong></p>
+<p><strong>Method 1: Using IntelliJ <a href="#JUnit">JUnit</a> test runner</strong></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1087,7 +1192,7 @@ Do take a look at the <a href="#logic-component">Design: Logic Component</a> sec
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Add a shorthand equivalent alias for each of the individual commands. For example, besides typing <code>clear</code>, the user can also type <code>c</code> to remove all persons in the list.</p>
+<p>Add a <a href="#Shorthand-Commands">shorthand</a> equivalent alias for each of the individual commands. For example, besides typing <code>clear</code>, the user can also type <code>c</code> to remove all persons in the list.</p>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
@@ -2491,7 +2596,7 @@ Use case ends.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-18 04:53:48 +00:00
+Last updated 2017-10-19 05:13:12 +00:00
 </div>
 </div>
 </body>
