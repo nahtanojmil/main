@@ -5,14 +5,14 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3">
-<title>AddressBook Level 4 - User Guide</title>
+<title>cherBook v1.2 - User Guide</title>
 <link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css">
 </head>
 <body class="article">
 <div id="header">
-<h1>AddressBook Level 4 - User Guide</h1>
+<h1>cherBook v1.2 - User Guide</h1>
 </div>
 <div id="content">
 <div id="preamble">
@@ -24,33 +24,66 @@
 <div id="toc" class="toc">
 <div id="toctitle"></div>
 <ul class="sectlevel1">
-<li><a href="#quick-start">1. Quick Start</a></li>
-<li><a href="#features">2. Features</a>
+<li><a href="#introduction">1. Introduction</a></li>
+<li><a href="#about">2. About</a></li>
+<li><a href="#set-up-and-get-started">3. Set Up and Get Started</a></li>
+<li><a href="#features">4. Features</a>
 <ul class="sectlevel2">
-<li><a href="#viewing-help-code-help-code">2.1. Viewing help : <code>help</code></a></li>
-<li><a href="#adding-a-person-code-add-code">2.2. Adding a person: <code>add</code></a></li>
-<li><a href="#listing-all-persons-code-list-code">2.3. Listing all persons : <code>list</code></a></li>
-<li><a href="#editing-a-person-code-edit-code">2.4. Editing a person : <code>edit</code></a></li>
-<li><a href="#locating-persons-by-name-code-find-code">2.5. Locating persons by name: <code>find</code></a></li>
-<li><a href="#locating-persons-by-tags-code-findtags-code">2.6. Locating persons by tags: <code>findtags</code></a></li>
-<li><a href="#deleting-a-person-code-delete-code">2.7. Deleting a person : <code>delete</code></a></li>
-<li><a href="#selecting-a-person-code-select-code">2.8. Selecting a person : <code>select</code></a></li>
-<li><a href="#sorting-all-persons-code-sort-code">2.9. Sorting all persons : <code>sort</code></a></li>
-<li><a href="#listing-entered-commands-code-history-code">2.10. Listing entered commands : <code>history</code></a></li>
-<li><a href="#undoing-previous-command-code-undo-code">2.11. Undoing previous command : <code>undo</code></a></li>
-<li><a href="#redoing-the-previously-undone-command-code-redo-code">2.12. Redoing the previously undone command : <code>redo</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">2.13. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">2.14. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">2.15. Saving the data</a></li>
+<li><a href="#viewing-help-code-help-code-code-since-v1-0-code">4.1. Viewing help : <code>help</code> <code>Since v1.0</code></a></li>
+<li><a href="#adding-a-person-code-add-code-code-since-v1-0-code">4.2. Adding a person: <code>add</code> <code>Since v1.0</code></a></li>
+<li><a href="#listing-all-persons-code-list-code-code-since-v1-0-code">4.3. Listing all persons : <code>list</code> <code>Since v1.0</code></a></li>
+<li><a href="#editing-a-person-code-edit-code-code-since-v1-0-code">4.4. Editing a person : <code>edit</code> <code>Since v1.0</code></a></li>
+<li><a href="#locating-persons-by-name-code-find-code-code-since-v1-0-code">4.5. Locating persons by name: <code>find</code> <code>Since v1.0</code></a></li>
+<li><a href="#locating-persons-by-tags-code-findtags-code-code-since-v1-1-code">4.6. Locating persons by tags: <code>findtags</code> <code>Since v1.1</code></a></li>
+<li><a href="#deleting-a-person-code-delete-code-code-since-v1-0-code">4.7. Deleting a person : <code>delete</code> <code>Since v1.0</code></a></li>
+<li><a href="#selecting-a-person-code-select-code-code-since-v1-0-code">4.8. Selecting a person : <code>select</code> <code>Since v1.0</code></a></li>
+<li><a href="#sorting-all-persons-code-sort-code-code-since-v1-2-code">4.9. Sorting all persons : <code>sort</code> <code>Since v1.2</code></a></li>
+<li><a href="#listing-entered-commands-code-history-code-code-since-v1-0-code">4.10. Listing entered commands : <code>history</code> <code>Since v1.0</code></a></li>
+<li><a href="#undoing-previous-command-code-undo-code-code-since-v1-0-code">4.11. Undoing previous command : <code>undo</code> <code>Since v1.0</code></a></li>
+<li><a href="#redoing-the-previously-undone-command-code-redo-code-code-since-v1-0-code">4.12. Redoing the previously undone command : <code>redo</code> <code>Since v1.0</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code-code-since-v1-0-code">4.13. Clearing all entries : <code>clear</code> <code>Since v1.0</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code-code-since-v1-0-code">4.14. Exiting the program : <code>exit</code> <code>Since v1.0</code></a></li>
+<li><a href="#saving-the-data">4.15. Saving the data</a></li>
 </ul>
 </li>
-<li><a href="#faq">3. FAQ</a></li>
-<li><a href="#command-summary">4. Command Summary</a></li>
+<li><a href="#command-shortcuts">5. Command Shortcuts</a></li>
+<li><a href="#faq">6. FAQ</a></li>
+<li><a href="#glossary">7. Glossary</a></li>
 </ul>
 </div>
 </div>
 <div class="sect1">
-<h2 id="quick-start"><a class="link" href="#quick-start">1. Quick Start</a></h2>
+<h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>cherBook</code> is an application for teachers to monitor their students' academic progress and easily contact their parents.<br>
+Using <code>cherBook</code> 's statistical analysis, you can easily monitor your student&#8217;s academic development and identify students that need more extra help.
+You will be able to view the 25th, 50th and 75th percentile scores of each class, giving you a quick overview of your the students' academic development.</p>
+</div>
+<div class="paragraph">
+<p>With the upcoming update in <code>v1.4</code>, <code>cherBook</code> will soon be able to compare statistics between different groups of students.</p>
+</div>
+<div class="paragraph">
+<p><code>cherBook v1.2</code> is available for the Linux, Unix and Windows and Mac OS X operating systems</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="about"><a class="link" href="#about">2. About</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This document will help you set up and get started with using <code>cherBook v1.2</code>.
+You will be given an overview of the features of <code>cherBook v1.2</code>, and shown how to use them and with the help of some examples.<br></p>
+</div>
+<div class="paragraph">
+<p>Some statistical concepts will be used in the explanations of the features <code>cherBook v1.2</code> offers.
+However, no prior technical knowledge is needed to understand this user guide.
+The statistical concepts  --- <code>percentiles</code>, <code>averages</code> and <code>standard deviation</code>--- will be explained and then demonstrated in the the <a href="#glossary">Glossary</a> below.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="set-up-and-get-started"><a class="link" href="#set-up-and-get-started">3. Set Up and Get Started</a></h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -115,7 +148,7 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 </div>
 </div>
 <div class="sect1">
-<h2 id="features"><a class="link" href="#features">2. Features</a></h2>
+<h2 id="features"><a class="link" href="#features">4. Features</a></h2>
 <div class="sectionbody">
 <div class="exampleblock">
 <div class="content">
@@ -141,13 +174,13 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 </div>
 </div>
 <div class="sect2">
-<h3 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">2.1. Viewing help : <code>help</code></a></h3>
+<h3 id="viewing-help-code-help-code-code-since-v1-0-code"><a class="link" href="#viewing-help-code-help-code-code-since-v1-0-code">4.1. Viewing help : <code>help</code> <code>Since v1.0</code></a></h3>
 <div class="paragraph">
 <p>Format: <code>help</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-a-person-code-add-code"><a class="link" href="#adding-a-person-code-add-code">2.2. Adding a person: <code>add</code></a></h3>
+<h3 id="adding-a-person-code-add-code-code-since-v1-0-code"><a class="link" href="#adding-a-person-code-add-code-code-since-v1-0-code">4.2. Adding a person: <code>add</code> <code>Since v1.0</code></a></h3>
 <div class="paragraph">
 <p>Adds a person to the address book<br>
 Format: <code>add n/NAME p/ student/(STUDENT_NUMBER) parent/(PARENT_NUMBER) e/EMAIL a/ADDRESS c/POSTALCODE [t/TAG]&#8230;&#8203;</code><br>
@@ -189,7 +222,7 @@ H: (Home number) HP: (HandPhone number) O: (Office number)
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-all-persons-code-list-code"><a class="link" href="#listing-all-persons-code-list-code">2.3. Listing all persons : <code>list</code></a></h3>
+<h3 id="listing-all-persons-code-list-code-code-since-v1-0-code"><a class="link" href="#listing-all-persons-code-list-code-code-since-v1-0-code">4.3. Listing all persons : <code>list</code> <code>Since v1.0</code></a></h3>
 <div class="paragraph">
 <p>Shows a list of all persons in the address book.<br>
 Format: <code>list</code><br>
@@ -197,7 +230,7 @@ Shorthand: <code>l</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">2.4. Editing a person : <code>edit</code></a></h3>
+<h3 id="editing-a-person-code-edit-code-code-since-v1-0-code"><a class="link" href="#editing-a-person-code-edit-code-code-since-v1-0-code">4.4. Editing a person : <code>edit</code> <code>Since v1.0</code></a></h3>
 <div class="paragraph">
 <p>Edits an existing person in the address book.<br>
 Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [c/POSTALCODE] [t/TAG]&#8230;&#8203;</code><br>
@@ -251,7 +284,7 @@ Edits the name of the 2nd person to be <code>Betsy Crower</code> and clears all 
 </div>
 </div>
 <div class="sect2">
-<h3 id="locating-persons-by-name-code-find-code"><a class="link" href="#locating-persons-by-name-code-find-code">2.5. Locating persons by name: <code>find</code></a></h3>
+<h3 id="locating-persons-by-name-code-find-code-code-since-v1-0-code"><a class="link" href="#locating-persons-by-name-code-find-code-code-since-v1-0-code">4.5. Locating persons by name: <code>find</code> <code>Since v1.0</code></a></h3>
 <div class="paragraph">
 <p>Finds persons whose names contain any of the given keywords.<br>
 Format: <code>find KEYWORD [MORE_KEYWORDS]</code><br>
@@ -305,7 +338,7 @@ Returns any person having names <code>Betsy</code>, <code>Tim</code>, or <code>J
 </div>
 </div>
 <div class="sect2">
-<h3 id="locating-persons-by-tags-code-findtags-code"><a class="link" href="#locating-persons-by-tags-code-findtags-code">2.6. Locating persons by tags: <code>findtags</code></a></h3>
+<h3 id="locating-persons-by-tags-code-findtags-code-code-since-v1-1-code"><a class="link" href="#locating-persons-by-tags-code-findtags-code-code-since-v1-1-code">4.6. Locating persons by tags: <code>findtags</code> <code>Since v1.1</code></a></h3>
 <div class="paragraph">
 <p>Finds persons whose tags contain all of the given keywords.<br>
 Format: <code>findtags KEYWORD [MORE_KEYWORDS]</code><br>
@@ -359,7 +392,7 @@ Returns any person having both <code>friends</code> and <code>owesMoney</code> t
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">2.7. Deleting a person : <code>delete</code></a></h3>
+<h3 id="deleting-a-person-code-delete-code-code-since-v1-0-code"><a class="link" href="#deleting-a-person-code-delete-code-code-since-v1-0-code">4.7. Deleting a person : <code>delete</code> <code>Since v1.0</code></a></h3>
 <div class="paragraph">
 <p>Deletes the specified person from the address book.<br>
 Format: <code>delete INDEX</code><br>
@@ -406,7 +439,7 @@ Deletes the 3rd person in the address book.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="selecting-a-person-code-select-code"><a class="link" href="#selecting-a-person-code-select-code">2.8. Selecting a person : <code>select</code></a></h3>
+<h3 id="selecting-a-person-code-select-code-code-since-v1-0-code"><a class="link" href="#selecting-a-person-code-select-code-code-since-v1-0-code">4.8. Selecting a person : <code>select</code> <code>Since v1.0</code></a></h3>
 <div class="paragraph">
 <p>Selects the person identified by the index number used in the last person listing.<br>
 Format: <code>select INDEX</code><br>
@@ -453,7 +486,7 @@ Selects the 3rd person in the address book.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="sorting-all-persons-code-sort-code"><a class="link" href="#sorting-all-persons-code-sort-code">2.9. Sorting all persons : <code>sort</code></a></h3>
+<h3 id="sorting-all-persons-code-sort-code-code-since-v1-2-code"><a class="link" href="#sorting-all-persons-code-sort-code-code-since-v1-2-code">4.9. Sorting all persons : <code>sort</code> <code>Since v1.2</code></a></h3>
 <div class="paragraph">
 <p>Shows a list of all persons in the address book sorted in alphabetical order.<br>
 Format: <code>sort</code><br>
@@ -495,7 +528,7 @@ Sorts the list in alphabetical order.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">2.10. Listing entered commands : <code>history</code></a></h3>
+<h3 id="listing-entered-commands-code-history-code-code-since-v1-0-code"><a class="link" href="#listing-entered-commands-code-history-code-code-since-v1-0-code">4.10. Listing entered commands : <code>history</code> <code>Since v1.0</code></a></h3>
 <div class="paragraph">
 <p>Lists all the commands that you have entered in reverse chronological order.<br>
 Format: <code>history</code><br>
@@ -517,7 +550,7 @@ Shorthand: <code>h</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">2.11. Undoing previous command : <code>undo</code></a></h3>
+<h3 id="undoing-previous-command-code-undo-code-code-since-v1-0-code"><a class="link" href="#undoing-previous-command-code-undo-code-code-since-v1-0-code">4.11. Undoing previous command : <code>undo</code> <code>Since v1.0</code></a></h3>
 <div class="paragraph">
 <p>Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
 Format: <code>undo</code><br>
@@ -568,7 +601,7 @@ The <code>undo</code> command fails as there are no undoable commands executed p
 </div>
 </div>
 <div class="sect2">
-<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">2.12. Redoing the previously undone command : <code>redo</code></a></h3>
+<h3 id="redoing-the-previously-undone-command-code-redo-code-code-since-v1-0-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code-code-since-v1-0-code">4.12. Redoing the previously undone command : <code>redo</code> <code>Since v1.0</code></a></h3>
 <div class="paragraph">
 <p>Reverses the most recent <code>undo</code> command.<br>
 Format: <code>redo</code><br>
@@ -606,21 +639,21 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">2.13. Clearing all entries : <code>clear</code></a></h3>
+<h3 id="clearing-all-entries-code-clear-code-code-since-v1-0-code"><a class="link" href="#clearing-all-entries-code-clear-code-code-since-v1-0-code">4.13. Clearing all entries : <code>clear</code> <code>Since v1.0</code></a></h3>
 <div class="paragraph">
 <p>Clears all entries from the address book.<br>
 Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">2.14. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code-code-since-v1-0-code"><a class="link" href="#exiting-the-program-code-exit-code-code-since-v1-0-code">4.14. Exiting the program : <code>exit</code> <code>Since v1.0</code></a></h3>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">2.15. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">4.15. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
@@ -629,7 +662,96 @@ There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="faq"><a class="link" href="#faq">3. FAQ</a></h2>
+<h2 id="command-shortcuts"><a class="link" href="#command-shortcuts">5. Command Shortcuts</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Here is a list of shortcuts you can use in cherBook together with some examples.</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">ShortHand</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>a</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>a n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS c/POSTALCODE [t/TAG]&#8230;&#8203;</code><br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Clear</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>c</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>c</code><br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>d</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>d 3</code><br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Edit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>e</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>e INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [c/POSTALCODE] [t/TAG]&#8230;&#8203;</code><br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Find</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>f</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>f KEYWORD [MORE_KEYWORDS]</code><br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Findtags</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ft</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ft KEYWORD [MORE_KEYWORDS]</code><br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>l</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>l</code><br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NA</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code><br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>s</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>s INDEX</code><br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sort</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>st</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sort</code><br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">History</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>h</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>h</code><br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Undo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>u</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>u</code><br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Redo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>r</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>r</code><br></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faq"><a class="link" href="#faq">6. FAQ</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
@@ -638,54 +760,23 @@ There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="command-summary"><a class="link" href="#command-summary">4. Command Summary</a></h2>
+<h2 id="glossary"><a class="link" href="#glossary">7. Glossary</a></h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Statistical concepts are explained with examples here:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Add</strong> <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS c/POSTALCODE [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 c/120380 t/friend t/colleague</code></p>
+<p><code>Percentile</code> - The percentile indicates that a certain percentage falls below that percentile.
+For example, if you score in the 25th percentile, then 25% of test takers are below your score.
+If you score in the 50th percentile, then 50% of test takers are below your score.
+and if you score in the 75th percentile, then 75% of test takers are below your score.</p>
 </li>
 <li>
-<p><strong>Clear</strong> : <code>clear</code></p>
-</li>
-<li>
-<p><strong>Delete</strong> : <code>delete INDEX</code><br>
-e.g. <code>delete 3</code></p>
-</li>
-<li>
-<p><strong>Edit</strong> : <code>edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [c/POSTALCODE] [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>edit 2 n/James Lee e/jameslee@example.com c/120283</code></p>
-</li>
-<li>
-<p><strong>Find</strong> : <code>find KEYWORD [MORE_KEYWORDS]</code><br>
-e.g. <code>find James Jake</code></p>
-</li>
-<li>
-<p><strong>Findtags</strong> : <code>findtags KEYWORD [MORE_KEYWORDS]</code><br>
-e.g. <code>findtags computing NUS engineering</code></p>
-</li>
-<li>
-<p><strong>List</strong> : <code>list</code></p>
-</li>
-<li>
-<p><strong>Help</strong> : <code>help</code></p>
-</li>
-<li>
-<p><strong>Select</strong> : <code>select INDEX</code><br>
-e.g.<code>select 2</code></p>
-</li>
-<li>
-<p><strong>Sort</strong> : <code>sort</code></p>
-</li>
-<li>
-<p><strong>History</strong> : <code>history</code></p>
-</li>
-<li>
-<p><strong>Undo</strong> : <code>undo</code></p>
-</li>
-<li>
-<p><strong>Redo</strong> : <code>redo</code></p>
+<p><code>Standard deviation</code> - Standard deviation is a number used to tell how measurements for a group are spread out from the average (mean), or expected value.
+A low standard deviation means that most of the numbers are very close to the average.
+A high standard deviation means that the numbers are spread out.</p>
 </li>
 </ul>
 </div>
@@ -694,7 +785,7 @@ e.g.<code>select 2</code></p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-19 07:29:50 +00:00
+Last updated 2017-10-20 07:38:36 +00:00
 </div>
 </div>
 </body>
