@@ -47,9 +47,10 @@
 <li><a href="#undo-redo-mechanism">3.1. Undo/Redo mechanism</a></li>
 <li><a href="#sort-mechanism">3.2. Sort mechanism</a></li>
 <li><a href="#add-student-parent-phone-contact-mechanism">3.3. Add student/parent phone contact mechanism</a></li>
-<li><a href="#findtags-mechanism">3.4. FindTags Mechanism</a></li>
-<li><a href="#logging">3.5. Logging</a></li>
-<li><a href="#configuration">3.6. Configuration</a></li>
+<li><a href="#add-remove-a-remark-mechanism">3.4. Add/Remove a remark mechanism</a></li>
+<li><a href="#findtags-mechanism">3.5. FindTags Mechanism</a></li>
+<li><a href="#logging">3.6. Logging</a></li>
+<li><a href="#configuration">3.7. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a>
@@ -979,7 +980,130 @@ is thrown. Prompting the user to enter the correct format as seen in the picture
 </div>
 </div>
 <div class="sect2">
-<h3 id="findtags-mechanism"><a class="link" href="#findtags-mechanism">3.4. FindTags Mechanism</a></h3>
+<h3 id="add-remove-a-remark-mechanism"><a class="link" href="#add-remove-a-remark-mechanism">3.4. Add/Remove a remark mechanism</a></h3>
+<div class="paragraph">
+<p>The remark mechanism is facilitated by making changes to the Remark class in the model component. It enables the user to add or remove a single remark of the student.</p>
+</div>
+<div class="paragraph">
+<p>To avoid confusion and messy UI, only one remarks can be stored in any one person at a time</p>
+</div>
+<div class="paragraph">
+<p>image::PersonCardDifference (Remark).PNG[width="600"]</p>
+</div>
+<div class="paragraph">
+<p><code>Remark</code> only deals with <code>UndoableCommands</code>. Commands that cannot be undone will inherit from <code>Command</code> instead. The following diagram shows the inheritance diagram for commands:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/LogicCommandClassDiagram.png" alt="LogicCommandClassDiagram" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>As you can see from the diagram, <code>UndoableCommand</code> adds an extra layer between the abstract <code>Command</code> class and concrete commands that can be undone, such as the <code>DeleteCommand</code>. Note that extra tasks need to be done when executing a command in an <em>undoable</em> way, such as saving the state of the address book before execution. <code>UndoableCommand</code> contains the high-level algorithm for those extra tasks while the child classes implements the details of how to execute the specific command. Note that this technique of putting the high-level algorithm in the parent class and lower-level steps of the algorithm in child classes is also known as the <a href="https://www.tutorialspoint.com/design_pattern/template_pattern.htm">template pattern</a>.</p>
+</div>
+<div class="paragraph">
+<p>Commands that are not undoable are implemented this way:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="type">class</span> <span class="class">ListCommand</span> <span class="directive">extends</span> Command {
+    <span class="annotation">@Override</span>
+    <span class="directive">public</span> CommandResult execute() {
+        <span class="comment">// ... list logic ...</span>
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With the extra layer, the commands that are undoable are implemented this way:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">public</span> <span class="directive">abstract</span> <span class="type">class</span> <span class="class">UndoableCommand</span> <span class="directive">extends</span> Command {
+    <span class="annotation">@Override</span>
+    <span class="directive">public</span> CommandResult execute() {
+        <span class="comment">// ... undo logic ...</span>
+      executeUndoableCommand();
+    }
+}
+<span class="directive">public</span> <span class="type">class</span> <span class="class">DeleteCommand</span> <span class="directive">extends</span> UndoableCommand {
+    <span class="annotation">@Override</span>
+    <span class="directive">public</span> CommandResult executeUndoableCommand() {
+        <span class="comment">// ... delete logic ...</span>
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When the user adds a new person to the address book, the person&#8217;s remark field will be denoted by "(add a remark)". Users are then able to add a single remark.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If user tries to add remark together with adding a new 'Person', it will display as invalid as the 'addCommand' does not allow the addition of remarks other then through the use of using the 'Remark' command.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Below are examples of trying to change remark through:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AddPersonInvalid(Remark).PNG" alt="AddPersonInvalid(Remark)" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>add command invalid</p>
+</div>
+<div class="paragraph">
+<p>image::EditPersonInvalid (Remark).PNG[width="600"]</p>
+</div>
+<div class="paragraph">
+<p>edit command invalid</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Only one remark is saved at any one time, if user does 'Remark' on the same person, it will be overwritten.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-4"><a class="link" href="#design-considerations-4">3.4.1. Design Considerations</a></h4>
+<div class="paragraph">
+<p><strong>Aspect:</strong> Implementation of <code>UndoableCommand</code><br>
+<strong>Alternative 1 (current choice):</strong> Add a new abstract method <code>executeUndoableCommand()</code><br>
+<strong>Pros:</strong> We will not lose any undone/redone functionality as it is now part of the default behaviour. Classes that deal with <code>Command</code> do not have to know that <code>executeUndoableCommand()</code> exist.<br>
+<strong>Cons:</strong> Hard for new developers to understand the template pattern.<br>
+<strong>Alternative 2:</strong> Just override <code>execute()</code><br>
+<strong>Pros:</strong> Does not involve the template pattern, easier for new developers to understand.<br>
+<strong>Cons:</strong> Classes that inherit from <code>UndoableCommand</code> must remember to call <code>super.execute()</code>, or lose the ability to undo/redo.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p><strong>Aspect</strong> Implementation of 'Remark' field.<br>
+<strong>Alternative 1 (current choice):</strong> Add a field in person as well as making it a command.<br>
+<strong>Pros:</strong> Able to easily change context of the field without much hassle.<br>
+<strong>Cons:</strong> Harder to debug as it is both a field and a command.<br>
+<strong>Alternative 2:</strong> Making it a field only.<br>
+<strong>Pros:</strong> Easier to keep track and debug.<br>
+<strong>Cons:</strong> Much harder and longer to implement a feature to solely change the remarks.</p>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="findtags-mechanism"><a class="link" href="#findtags-mechanism">3.5. FindTags Mechanism</a></h3>
 <div class="paragraph">
 <p>The FindTags mechanism is implemented using FindTagsCommand.
 It supports searching for persons whose tags contains at least all the tags input by the user.</p>
@@ -1066,7 +1190,7 @@ The code with Predicates is also much more readable than using if-else blocks.</
 </div>
 </div>
 <div class="sect3">
-<h4 id="alternatives-considered"><a class="link" href="#alternatives-considered">3.4.1. Alternatives considered.</a></h4>
+<h4 id="alternatives-considered"><a class="link" href="#alternatives-considered">3.5.1. Alternatives considered.</a></h4>
 <div class="paragraph">
 <p><strong>Aspect:</strong> Having a separate predicate class to support <code>findtags</code><br>
 <strong>Alternative 1 (current choice):</strong> Have a <code>TagsContainsKeywordsPredicate</code> to facilitate search<br>
@@ -1079,7 +1203,7 @@ The code with Predicates is also much more readable than using if-else blocks.</
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.5. Logging</a></h3>
+<h3 id="logging"><a class="link" href="#logging">3.6. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
@@ -1117,7 +1241,7 @@ The code with Predicates is also much more readable than using if-else blocks.</
 </div>
 </div>
 <div class="sect2">
-<h3 id="configuration"><a class="link" href="#configuration">3.6. Configuration</a></h3>
+<h3 id="configuration"><a class="link" href="#configuration">3.7. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g App name, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -2884,7 +3008,7 @@ Use case ends.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-10-21 08:16:58 +00:00
+Last updated 2017-10-21 13:10:20 +00:00
 </div>
 </div>
 </body>
