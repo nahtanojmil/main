@@ -23,6 +23,7 @@ import seedu.address.model.Model;
 import seedu.address.model.ModelManager;
 import seedu.address.model.person.ReadOnlyPerson;
 
+//@@author nahtanojmil
 public class GraphPanelTest extends GuiUnitTest {
 
     private static final ObservableList<ReadOnlyPerson> TYPICAL_PERSONS =

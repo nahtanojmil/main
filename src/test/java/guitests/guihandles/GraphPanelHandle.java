@@ -2,6 +2,7 @@ package guitests.guihandles;
 
 import javafx.scene.Node;
 
+//@@author nahtanojmil
 /**
  * Provides a handle to the graph of a person in the person list panel.
  */
