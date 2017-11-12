@@ -1,0 +1,104 @@
+= Manual Testing for cherBook
+:imagesDir: images
+:stylesDir: stylesheets
+:experimental:
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+endif::[]
+
+== How to load the Sample Data
+
+. Go to `{project root}\src\test\data\ManualTesting`
+. Copy the `[T16-B2][cherBook]SampleData.xml` file.
+. Paste the copied file inside `{project root}\src\test\data`.
+. Rename the file to `addressbook.xml` in all lower case.
+. The Sample data is now loaded and ready for testing.
+
+The Sample Data contains 40 students, 24 different tags and 0 appointments in the schedule.
+
+== Testing the features
+
+Follow the instructions below to test cherbook's features.
+
+=== Student Management
+
+==== Adding Students
+Commands to type:
+
+Expected Results:
+
+==== Editing Students
+Commands to type:
+
+Expected Results:
+
+==== Deleting Students
+Commands to type:
+
+Expected Results:
+
+==== Managing Remarks
+Commands to type:
+
+Expected Results:
+
+==== Feature 5
+Commands to type:
+
+Expected Results:
+
+=== Schedule Management
+
+==== Add appointments
+Commands to type:
+
+Expected Results:
+
+==== Deleting appointments
+Commands to type:
+
+Expected Results:
+
+==== Feature 3
+Commands to type:
+
+Expected Results:
+
+==== Feature 4
+Commands to type:
+
+Expected Results:
+
+==== Feature 5
+Commands to type:
+
+Expected Results:
+
+
+=== User Interface Management
+
+==== Opening Help Window
+Commands to type:
+
+Expected Results:
+
+==== Switching to and from Home Page
+Commands to type:
+
+Expected Results:
+
+==== Switching between tabs in the Graph Panel
+Commands to type:
+
+Expected Results:
+
+==== Feature 4
+Commands to type:
+
+Expected Results:
+
+==== Feature 5
+Commands to type:
+
+Expected Results:

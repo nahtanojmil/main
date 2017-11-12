@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addressbook>
+    <persons>
+        <name>Alex Yeoh</name>
+        <phone>91234563</phone>
+        <parentPhone>97273111</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>Blk 30 Geylang Street 29, #06-40</address>
+        <formClass>12SCI23</formClass>
+        <grades>940.0</grades>
+        <postalCode>123456</postalCode>
+        <remark>Represented school for national track meet</remark>
+        <tagged>track</tagged>
+        <tagged>athletics</tagged>
+    </persons>
+    <persons>
+        <name>Bernice Yu</name>
+        <phone>97971197</phone>
+        <parentPhone>97271231</parentPhone>
+        <email>berniceyu@example.com</email>
+        <address>Blk 30 Lorong 3 Serangoon Gardens, #07-18</address>
+        <formClass>12SCI23</formClass>
+        <grades>530.0</grades>
+        <postalCode>654321</postalCode>
+        <remark>Woman</remark>
+        <tagged>colleagues</tagged>
+        <tagged>scholarship</tagged>
+        <tagged>canoeing</tagged>
+    </persons>
+    <persons>
+        <name>Charlotte Oliveiro</name>
+        <phone>97129722</phone>
+        <parentPhone>97211221</parentPhone>
+        <email>charlotte@example.com</email>
+        <address>Blk 11 Ang Mo Kio Street 74, #11-04</address>
+        <formClass>12SCI23</formClass>
+        <grades>435.0</grades>
+        <postalCode>987654</postalCode>
+        <remark>Awesome mate</remark>
+        <tagged>studentCouncil</tagged>
+    </persons>
+    <persons>
+        <name>David Li</name>
+        <phone>85473617</phone>
+        <parentPhone>91113011</parentPhone>
+        <email>lidavid@example.com</email>
+        <address>Blk 436 Serangoon Gardens Street 26, #16-43</address>
+        <formClass>12SCI23</formClass>
+        <grades>245.0</grades>
+        <postalCode>676767</postalCode>
+        <remark>Studies suffering because of CCA</remark>
+        <tagged>needsHelp</tagged>
+        <tagged>studentCouncil</tagged>
+    </persons>
+    <persons>
+        <name>Irfan Ibrahim</name>
+        <phone>97978789</phone>
+        <parentPhone>91231211</parentPhone>
+        <email>irfan@example.com</email>
+        <address>Blk 47 Tampines Street 20, #17-35</address>
+        <formClass>12SCI23</formClass>
+        <grades>564.0</grades>
+        <postalCode>999999</postalCode>
+        <remark>Indicated preference for joining another CCA</remark>
+        <tagged>ScienceTeam</tagged>
+        <tagged>sailing</tagged>
+    </persons>
+    <persons>
+        <name>Roy Balakrishnan</name>
+        <phone>97911624</phone>
+        <parentPhone>97112233</parentPhone>
+        <email>royb@example.com</email>
+        <address>Blk 45 Aljunied Street 85, #11-31</address>
+        <formClass>12SCI23</formClass>
+        <grades>234.0</grades>
+        <postalCode>999666</postalCode>
+        <remark>Mixed ethnicity</remark>
+        <tagged>colleagues</tagged>
+    </persons>
+    <persons>
+        <name>Lynn Tan</name>
+        <phone>84144141</phone>
+        <parentPhone>97771111</parentPhone>
+        <email>lynntann@example.com</email>
+        <address>Blk 436 Serangoon Gardens Street 26, #16-43</address>
+        <formClass>12SCI23</formClass>
+        <grades>245.0</grades>
+        <postalCode>676767</postalCode>
+        <remark>Studies suffering because of CCA</remark>
+        <tagged>band</tagged>
+        <tagged>dance</tagged>
+    </persons>
+    <persons>
+        <name>Mariam Mohamad</name>
+        <phone>85215625</phone>
+        <parentPhone>82823131</parentPhone>
+        <email>mmohd@example.com</email>
+        <address>Blk 6 Home Gardens Street 26, #16-43</address>
+        <formClass>12SCI23</formClass>
+        <grades>245.0</grades>
+        <postalCode>676767</postalCode>
+        <remark>Studies suffering because of CCA</remark>
+        <tagged>needsHelp</tagged>
+        <tagged>dance</tagged>
+    </persons>
+    <persons>
+        <name>Amy Leow</name>
+        <phone>81726490</phone>
+        <parentPhone>91919111</parentPhone>
+        <email>amyleow@example.com</email>
+        <address>Blk 46 Tame Street 26, #16-43</address>
+        <formClass>12SCI23</formClass>
+        <grades>245.0</grades>
+        <postalCode>676767</postalCode>
+        <remark>Studies suffering because of CCA</remark>
+        <tagged>athletics</tagged>
+    </persons>
+    <persons>
+        <name>Laura Teh</name>
+        <phone>86542453</phone>
+        <parentPhone>97272011</parentPhone>
+        <email>laurateh@example.com</email>
+        <address>Blk 45 Cuper Street 26, #16-43</address>
+        <formClass>12SCI23</formClass>
+        <grades>565.0</grades>
+        <postalCode>676767</postalCode>
+        <remark>Studies suffering because of CCA</remark>
+        <tagged>athletics</tagged>
+    </persons>
+    <persons>
+        <name>Amanda Sun</name>
+        <phone>95851354</phone>
+        <parentPhone>97211211</parentPhone>
+        <email>sunamanda@example.com</email>
+        <address>Blk 123 Orchard Gardens Street 26, #16-43</address>
+        <formClass>12SCI23</formClass>
+        <grades>785.0</grades>
+        <postalCode>676767</postalCode>
+        <remark>Arrogant but is good in studies</remark>
+        <tagged>scholarship</tagged>
+    </persons>
+    <persons>
+        <name>Jolene Saram</name>
+        <phone>85373543</phone>
+        <parentPhone>97271122</parentPhone>
+        <email>saramjol@example.com</email>
+        <address>Blk 22 Serangoon Drive 26, #16-43</address>
+        <formClass>12SCI23</formClass>
+        <grades>895.0</grades>
+        <postalCode>676767</postalCode>
+        <remark>Top in class for math</remark>
+        <tagged>scienceTeam</tagged>
+    </persons>
+    <persons>
+        <name>Laura Li</name>
+        <phone>89345354</phone>
+        <parentPhone>91112222</parentPhone>
+        <email>lilaura@example.com</email>
+        <address>Blk 42 Tampines Street 26, #16-43</address>
+        <formClass>12SCI23</formClass>
+        <grades>545.0</grades>
+        <postalCode>676767</postalCode>
+        <remark>Consitent effort given</remark>
+        <tagged>studentCouncil</tagged>
+    </persons>
+    <persons>
+        <name>Goh Qing Jing</name>
+        <phone>85473617</phone>
+        <parentPhone>97272222</parentPhone>
+        <email>gohqingqing@example.com</email>
+        <address>Blk 56 Sungei Bedok 26, #16-43</address>
+        <formClass>12SCI23</formClass>
+        <grades>245.0</grades>
+        <postalCode>676767</postalCode>
+        <remark>Class clown</remark>
+        <tagged>studentCouncil</tagged>
+    </persons>
+    <persons>
+        <name>Thia Hon Teng</name>
+        <phone>93455383</phone>
+        <parentPhone>91112121</parentPhone>
+        <email>hauting@example.com</email>
+        <address>Blk 567 Hope Street 26, #16-43</address>
+        <formClass>12SCI23</formClass>
+        <grades>345.0</grades>
+        <postalCode>676767</postalCode>
+        <remark>Studies suffering because of CCA</remark>
+        <tagged>needsHelp</tagged>
+        <tagged>studentCouncil</tagged>
+    </persons>
+    <persons>
+        <name>Dorothy Thia</name>
+        <phone>93457384</phone>
+        <parentPhone>97270021</parentPhone>
+        <email>dorothythia@example.com</email>
+        <address>Blk 457 Wizard drive 26, #16-43</address>
+        <formClass>12SCI23</formClass>
+        <grades>295.0</grades>
+        <postalCode>676767</postalCode>
+        <remark>Always blur</remark>
+        <tagged>studentCouncil</tagged>
+    </persons>
+    <persons>
+        <name>John Doe</name>
+        <phone>95645686</phone>
+        <parentPhone>91912120</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>Blk 7 Ang Mo Kio Street 62</address>
+        <formClass>15APP10</formClass>
+        <grades>990.0</grades>
+        <postalCode>569086</postalCode>
+        <remark>Developed mobile games for school</remark>
+        <tagged>scholarship</tagged>
+        <tagged>GameDev</tagged>
+    </persons>
+    <persons>
+        <name>John Hoe</name>
+        <phone>96575688</phone>
+        <parentPhone>97112211</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>SIS Building 4 Leng Kee Road #03-07</address>
+        <formClass>15APP10</formClass>
+        <grades>690.0</grades>
+        <postalCode>159088</postalCode>
+        <remark>Head of dance CCA</remark>
+        <tagged>studentCouncil</tagged>
+        <tagged>athletics</tagged>
+        <tagged>dance</tagged>
+    </persons>
+    <persons>
+        <name>John Shoe</name>
+        <phone>96576756</phone>
+        <parentPhone>97272891</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>Blk 567 Choa Chu Kang Street 86</address>
+        <formClass>15APP10</formClass>
+        <grades>960.0</grades>
+        <postalCode>640557</postalCode>
+        <remark>Enrolled in the Design Centric Program</remark>
+        <tagged>DCP</tagged>
+    </persons>
+    <persons>
+        <name>John Lowe</name>
+        <phone>96575628</phone>
+        <parentPhone>97271111</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>Blk 876 Lim Chu Kang Street 92</address>
+        <formClass>15APP10</formClass>
+        <grades>700.0</grades>
+        <postalCode>640545</postalCode>
+        <remark>Air Force regular</remark>
+        <tagged>studentCouncil</tagged>
+        <tagged>flyingClub</tagged>
+        <tagged>athletics</tagged>
+    </persons>
+    <persons>
+        <name>John Know</name>
+        <phone>94151638</phone>
+        <parentPhone>97271111</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>Blk 743 Phua Chu Kang Street 14</address>
+        <formClass>15APP10</formClass>
+        <grades>900.0</grades>
+        <postalCode>640345</postalCode>
+        <remark>Individual champion of AstroChallenge17</remark>
+        <tagged>scholarship</tagged>
+        <tagged>ScienceTeam</tagged>
+    </persons>
+    <persons>
+        <name>John Bow</name>
+        <phone>96576866</phone>
+        <parentPhone>97273232</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>Blk 334 Yio Chu Kang Street 25</address>
+        <formClass>15APP10</formClass>
+        <grades>90.0</grades>
+        <postalCode>069541</postalCode>
+        <remark>suffering in studies because of CCA </remark>
+        <tagged>needsHelp</tagged>
+        <tagged>Archery</tagged>
+    </persons>
+    <persons>
+        <name>Bruno Mas</name>
+        <phone>97973322</phone>
+        <parentPhone>97111011</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>10 Biopolis Way #03-03/04 CHROMOS</address>
+        <formClass>16MUS20</formClass>
+        <grades>979.0</grades>
+        <postalCode>123456</postalCode>
+        <remark>I am a man</remark>
+        <tagged>studentCouncil</tagged>
+        <tagged>band</tagged>
+        <tagged>dance</tagged>
+    </persons>
+    <persons>
+        <name>Nick Joe</name>
+        <phone>93452797</phone>
+        <parentPhone>97273011</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>88 Syed Alwi Road #01-02</address>
+        <formClass>16MUS20</formClass>
+        <grades>936.0</grades>
+        <postalCode>123456</postalCode>
+        <remark>I am a man</remark>
+        <tagged>band</tagged>
+    </persons>
+    <persons>
+        <name>Chris Mar</name>
+        <phone>97234797</phone>
+        <parentPhone>97272312</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>2 Corporation Road #03-09/11</address>
+        <formClass>16MUS20</formClass>
+        <grades>1056.0</grades>
+        <postalCode>123456</postalCode>
+        <remark>I am a man</remark>
+        <tagged>band</tagged>
+    </persons>
+    <persons>
+        <name>Fred Mer</name>
+        <phone>97567832</phone>
+        <parentPhone>97271111</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>3014, Ubi Road 1, #06-40</address>
+        <formClass>16MUS20</formClass>
+        <grades>750.0</grades>
+        <postalCode>123456</postalCode>
+        <remark>I am a man</remark>
+        <tagged>band</tagged>
+    </persons>
+    <persons>
+        <name>Camila C</name>
+        <phone>91432143</phone>
+        <parentPhone>91123011</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>Blk 30 Geylang Street 29, #06-40</address>
+        <formClass>16MUS20</formClass>
+        <grades>750.0</grades>
+        <postalCode>123456</postalCode>
+        <remark>I am a man</remark>
+        <tagged>band</tagged>
+        <tagged>dance</tagged>
+    </persons>
+    <persons>
+        <name>Rick Sanchez</name>
+        <phone>97273131</phone>
+        <parentPhone>97070000</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>Blk 30 Washington Street 29, #06-40</address>
+        <formClass>16UNI137</formClass>
+        <grades>3000.0</grades>
+        <postalCode>123456</postalCode>
+        <remark>Projected valedictorian. 
+ Wrote and performed the hit song "Get Schwifty".</remark>
+        <tagged>studentCouncil</tagged>
+        <tagged>scholarship</tagged>
+        <tagged>ScienceTeam</tagged>
+        <tagged>band</tagged>
+        <tagged>dance</tagged>
+    </persons>
+    <persons>
+        <name>Morty Smith</name>
+        <phone>94157312</phone>
+        <parentPhone>91231231</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>69 Choa Chu Kang Loop #02-12</address>
+        <formClass>16UNI137</formClass>
+        <grades>500.0</grades>
+        <postalCode>123456</postalCode>
+        <remark>I am a man</remark>
+        <tagged>band</tagged>
+        <tagged>GameDev</tagged>
+        <tagged>dance</tagged>
+    </persons>
+    <persons>
+        <name>Summer Smith</name>
+        <phone>97971111</phone>
+        <parentPhone>92020202</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>1002 Jalan Bukit Merah #02-04</address>
+        <formClass>16UNI137</formClass>
+        <grades>700</grades>
+        <postalCode>123456</postalCode>
+        <remark>I am a man</remark>
+        <tagged>fashion</tagged>
+    </persons>
+    <persons>
+        <name>Beth Smith</name>
+        <phone>97972321</phone>
+        <parentPhone>91122313</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>290 Orchard Road #08-03</address>
+        <formClass>16UNI137</formClass>
+        <grades>1000.0</grades>
+        <postalCode>123456</postalCode>
+        <remark>I am a man</remark>
+        <tagged>social</tagged>
+        <tagged>judo</tagged>
+        <tagged>fashion</tagged>
+    </persons>
+    <persons>
+        <name>Jerry Smith</name>
+        <phone>97983487</phone>
+        <parentPhone>97210000</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>501 Orchard Road #07-02</address>
+        <formClass>16UNI137</formClass>
+        <grades>300.0</grades>
+        <postalCode>123456</postalCode>
+        <remark>I am a man</remark>
+        <tagged>social</tagged>
+    </persons>
+    <persons>
+        <name>Jon Sow</name>
+        <phone>97567528</phone>
+        <parentPhone>97271211</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>Winter Street 1, #11-40</address>
+        <formClass>11WES01</formClass>
+        <grades>500.0</grades>
+        <postalCode>242238</postalCode>
+        <remark>Leader of the Class</remark>
+        <tagged>debate</tagged>
+        <tagged>fencing</tagged>
+    </persons>
+    <persons>
+        <name>Greg C</name>
+        <phone>97211031</phone>
+        <parentPhone>97212311</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>Kings Street 1, #01-40</address>
+        <formClass>11WES01</formClass>
+        <grades>400.0</grades>
+        <postalCode>354373</postalCode>
+        <remark>Big and Strong</remark>
+        <tagged>athletics</tagged>
+        <tagged>fencing</tagged>
+    </persons>
+    <persons>
+        <name>Sandor C</name>
+        <phone>97564654</phone>
+        <parentPhone>97122131</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>Stone Street 1, #21-40</address>
+        <formClass>11WES01</formClass>
+        <grades>800.0</grades>
+        <postalCode>935437</postalCode>
+        <remark>Greg's brother</remark>
+        <tagged>athletics</tagged>
+        <tagged>fencing</tagged>
+    </persons>
+    <persons>
+        <name>Cersi Lan</name>
+        <phone>91122990</phone>
+        <parentPhone>97210131</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>Kings Street 1, #01-40</address>
+        <formClass>11WES01</formClass>
+        <grades>750.0</grades>
+        <postalCode>254823</postalCode>
+        <remark>Very determined to do well</remark>
+        <tagged>debate</tagged>
+        <tagged>fashion</tagged>
+    </persons>
+    <persons>
+        <name>James Lan</name>
+        <phone>89018719</phone>
+        <parentPhone>91231000</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>Kings Street 1, #01-40</address>
+        <formClass>11WES01</formClass>
+        <grades>400.0</grades>
+        <postalCode>123456</postalCode>
+        <remark>Studies suffering because of relationship</remark>
+        <tagged>debate</tagged>
+        <tagged>needsHelp</tagged>
+        <tagged>athletics</tagged>
+        <tagged>fencing</tagged>
+    </persons>
+    <persons>
+        <name>Tywin Lan</name>
+        <phone>86545248</phone>
+        <parentPhone>97273333</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>Lannis Street. # 23-01</address>
+        <formClass>11WES01</formClass>
+        <grades>1200.0</grades>
+        <postalCode>245245</postalCode>
+        <remark>High performing in all CCAs and studies</remark>
+        <tagged>debate</tagged>
+        <tagged>chess</tagged>
+        <tagged>scholarship</tagged>
+        <tagged>fencing</tagged>
+    </persons>
+    <persons>
+        <name>Marge Tyrell</name>
+        <phone>84366478</phone>
+        <parentPhone>97274444</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>High Towers Street 1, #50-01</address>
+        <formClass>11WES01</formClass>
+        <grades>1000.0</grades>
+        <postalCode>374539</postalCode>
+        <remark>Top in Class for both English and Literature</remark>
+        <tagged>debate</tagged>
+        <tagged>studentCouncil</tagged>
+        <tagged>scholarship</tagged>
+    </persons>
+    <persons>
+        <name>Dany Tar</name>
+        <phone>81235155</phone>
+        <parentPhone>97212121</parentPhone>
+        <email>alexyeoh@example.com</email>
+        <address>Stone Street 1, #20-01</address>
+        <formClass>11WES01</formClass>
+        <grades>2000.0</grades>
+        <postalCode>374539</postalCode>
+        <remark>Top in Class for both English and Literature</remark>
+        <tagged>debate</tagged>
+        <tagged>studentCouncil</tagged>
+        <tagged>scholarship</tagged>
+    </persons>
+    <tags>chess</tags>
+    <tags>social</tags>
+    <tags>studentCouncil</tags>
+    <tags>judo</tags>
+    <tags>ScienceTeam</tags>
+    <tags>GameDev</tags>
+    <tags>canoeing</tags>
+    <tags>DCP</tags>
+    <tags>debate</tags>
+    <tags>needsHelp</tags>
+    <tags>colleagues</tags>
+    <tags>scholarship</tags>
+    <tags>Archery</tags>
+    <tags>flyingClub</tags>
+    <tags>band</tags>
+    <tags>track</tags>
+    <tags>athletics</tags>
+    <tags>sailing</tags>
+    <tags>dance</tags>
+    <tags>scienceTeam</tags>
+    <tags>fashion</tags>
+    <tags>fencing</tags>
+    <tags>owesMoney</tags>
+    <tags>friends</tags>
+</addressbook>
