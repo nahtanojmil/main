@@ -75,14 +75,165 @@ Added remark to person: Irfan Ibrahim Phone: 97978789 ParentPhone: 91231211 Emai
 Added remark to person: John Lowe Phone: 96575628 ParentPhone: 97271111 Email: alexyeoh@example.com Address: Blk 876 Lim Chu Kang Street 92 FormClass: 15APP10 Grades: 700.0 PostalCode: 640545 Remark: Quit the army Tags: [studentCouncil][flyingClub][athletics] +
 Added remark to person: Morty Smith Phone: 94157312 ParentPhone: 91231231 Email: alexyeoh@example.com Address: 69 Choa Chu Kang Loop #02-12 FormClass: 16UNI137 Grades: 500.0 PostalCode: 123456 Remark: But still a boy Tags: [band][GameDev][dance]
 
-==== Selecting Student
-Commands to type:
-select 37
-s 19
-
+==== Listing all Students
+===== Full Command
+Commands to type: `list`    +
 Expected Results:
-Selected Person: 37 +
+```
+Listed all persons
+```
+===== Using shorthand
+Commands to type: `list` then `s 19` +
+Expected Results:
+```
+Listed all persons
+```
+===== Case sensitive command
+Commands to type: `LiSt` +
+Expected Results:
+```
+Unknown command
+```
+
+==== Selecting Student
+===== Full Command
+Commands to type: `list` then `select 37` +
+Expected Results:
+```
+Selected Person: 37
+```
+===== Using shorthand
+Commands to type: `list` then `s 19` +
+Expected Results:
+```
+Listed all persons
+```
+```
 Selected Person: 19
+```
+===== Index out of bounds
+Commands to type: `list` then `select 100` +
+Expected Results:
+```
+Listed all persons
+```
+```
+The person index provided is invalid
+```
+===== Wrong command format (no arguments)
+Commands to type: `select _` +
+Expected Results:
+```
+Invalid command format! +
+select: Selects the person identified by the index number used in the last person listing. +
+Parameters: INDEX (must be a positive integer) +
+Example: select 1``` +
+```
+[NOTE]
+"_" represents a whitespace
+===== Case sensitive command
+Commands to type: `LiSt` +
+Expected Results:
+```
+Unknown command
+```
+
+==== Finding by Name
+
+===== Single keyword
+Commands to type: `find john` +
+Expected Results:
+```
+6 persons listed!
+```
+===== Using shorthand
+Commands to type: `f john +
+Expected Results:
+```
+6 persons listed!
+```
+===== Verifying OR Search
+Commands to type: `find david` then `find tan` then `find david tan` +
+Expected Results:
+```
+1 persons listed!
+```
+```
+1 persons listed!
+```
+```
+2 persons listed!
+```
+===== Case insensitive keywords
+Commands to type: `find jOhN` +
+Expected Results:
+```
+6 persons listed!
+```
+===== Case sensitive command
+Commands to type: `fInD john` +
+Expected Results:
+```
+Unknown command
+```
+===== Wrong Command Format (No arguments)
+Commands to type: `find _` +
+Expected Results:
+```
+Invalid command format! +
+find: Finds all persons whose names contain any of the specified keywords (case-sensitive) and displays them as a list with index numbers. +
+Parameters: KEYWORD [MORE_KEYWORDS]... +
+Example: find alice bob charlie +
+```
+[NOTE]
+"_" represents a whitespace
+
+==== Finding Students by Tags
+
+===== Single keyword
+Commands to type: `findtags studentcouncil` +
+Expected Results:
+```
+12 persons listed!
+```
+===== Using shorthand
+Commands to type: `ft studentcouncil` +
+Expected Results:
+```
+12 persons listed!
+```
+===== Verifying AND Search
+Commands to type: `findtags studentcouncil scholarship` +
+Expected Results:
+```
+3 persons listed!
+```
+===== Case insensitive keywords
+Commands to type: `findtags StuDentCouNcil` +
+Expected Results:
+```
+6 persons listed!
+```
+===== Case sensitive command
+Commands to type: `fIndTagS StuDentCouNcil` +
+Expected Results:
+```
+`Unknown command`
+```
+===== Wrong Command Format (No arguments)
+Commands to type: `findtags _` +
+Expected Results: +
+
+[NOTE]
+"_" represents a whitespace
+
+```
+Invalid command format! +
+`findtags: Finds all persons whose tags contain any of the specified keywords (case-insensitive) and displays them as a list with index numbers. +
+Parameters: KEYWORD [MORE_KEYWORDS]... +
+Example: findtags friends owesMoney` +
+```
+
 
 === Schedule Management
 
