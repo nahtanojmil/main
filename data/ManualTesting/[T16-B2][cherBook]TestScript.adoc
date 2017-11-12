@@ -15,7 +15,7 @@ endif::[]
 . Rename the file to `addressbook.xml` in all lower case.
 . The Sample data is now loaded and ready for testing.
 
-The Sample Data contains 40 students, 24 different tags and 0 appointments in the schedule.
+The Sample Data contains 40 students, 24 different tags and 7 appointments in the schedule.
 
 == Testing the features
 
@@ -23,10 +23,14 @@ Follow the instructions below to test cherbook's features.
 
 === Student Management
 
-==== Adding Students
+==== Adding Students (With / Without optional inputs)
 Commands to type:
+add n/Kelly Doe p/97979999 pp/97302222 e/kellyd@example.com a/665, Tampines Ave 56, #05-16 f/12S23 g/123.0 c/673349 t/track t/judo +
+a n/Zinc Nayer p/97971234 pp/97301122 e/zincnayer@example.com f/12S23 g/123.0 t/track t/fashion
 
 Expected Results:
+New person added: Kelly Doe Phone: 97979999 ParentPhone: 97302222 Email: kellyd@example.com Address: 665, Tampines Ave 56, #05-16 FormClass: 12S23 Grades: 123.0 PostalCode: 673349 Remark: (add a remark) Tags: [judo][track] +
+New person added: Zinc Nayer Phone: 97971234 ParentPhone: 97301122 Email: zincnayer@example.com Address: (Address not recorded) FormClass: 12S23 Grades: 123.0 PostalCode: (Postal code not recorded) Remark: (add a remark) Tags: [track][fashion]
 
 ==== Editing Students
 Commands to type:
@@ -51,8 +55,14 @@ Edited Person: John Hoe Phone: 96575688 ParentPhone: 97112211 Email: johnhoe@gma
 
 ==== Deleting Students
 Commands to type:
+delete 40 +
+d 39 +
+d 1
 
-Expected Results:
+Expected Results: +
+Deleted Person: Dany Tar Phone: 81235155 ParentPhone: 97212121 Email: alexyeoh@example.com Address: Stone Street 1, #20-01 FormClass: 11WES01 Grades: 2000.0 PostalCode: 374539 Remark: Top in Class for both English and Literature Tags: [debate][studentCouncil][scholarship] +
+Deleted Person: Marge Tyrell Phone: 84366478 ParentPhone: 97274444 Email: alexyeoh@example.com Address: High Towers Street 1, #50-01 FormClass: 11WES01 Grades: 1000.0 PostalCode: 374539 Remark: Top in Class for both English and Literature Tags: [debate][studentCouncil][scholarship +
+Deleted Person: Alex Yeoh Phone: 91234563 ParentPhone: 97273111 Email: alexyeoh@example.com Address: Blk 30 Geylang Street 29, #06-40 FormClass: 12SCI23 Grades: 940.0 PostalCode: 123456 Remark: Represented school for national track meet Tags: [track][athletics]
 
 ==== Managing Remarks
 Commands to type:
@@ -77,24 +87,71 @@ Selected Person: 19
 === Schedule Management
 
 ==== Add appointments
-Commands to type:
+Commands to type: +
+addsch 2 s/18 november 6pm +
+addsch 25 s/19 november 2pm +
+addsch 26 s/19 november 6pm +
+addsch 35 s/11-23-2017 12pm +
+addschedule 29 s/25 november 8pm +
+addschedule 10 s/11-29-2017 5pm +
+addschedule 6 s/christmas 2pm +
 
-Expected Results:
+Expected Results: +
+Added Bernice Yu to consultations schedule on Sat Nov 18 18:00:00 SGT 2017. +
+Use 'viewsch' or 'viewschedule' command to view all your schedules. +
+Added Chris Mar to consultations schedule on Sun Nov 19 14:00:00 SGT 2017. +
+Use 'viewsch' or 'viewschedule' command to view all your schedules. +
+Added Fred Mer to consultations schedule on Sun Nov 19 18:00:00 SGT 2017. +
+Use 'viewsch' or 'viewschedule' command to view all your schedules. +
+Added Sandor C to consultations schedule on Thu Nov 23 12:00:00 SGT 2017. +
+Use 'viewsch' or 'viewschedule' command to view all your schedules. +
+Added Morty Smith to consultations schedule on Sat Nov 25 20:00:00 SGT 2017. +
+Use 'viewsch' or 'viewschedule' command to view all your schedules. +
+Added Laura Teh to consultations schedule on Wed Nov 29 17:00:00 SGT 2017. +
+Use 'viewsch' or 'viewschedule' command to view all your schedules. +
+Added Roy Balakrishnan to consultations schedule on Mon Dec 25 14:00:00 SGT 2017. +
+Use 'viewsch' or 'viewschedule' command to view all your schedules.
+
+==== Viewing appointments
+Commands to type: +
+viewsch +
+viewschedule
+
+Expected Results: +
+Listed your schedule. +
+[Schedule is fixed with Bernice Yu on Sat Nov 18 18:00:00 SGT 2017 +
+ Schedule is fixed with Chris Mar on Sun Nov 19 14:00:00 SGT 2017 +
+ Schedule is fixed with Fred Mer on Sun Nov 19 18:00:00 SGT 2017 +
+ Schedule is fixed with Sandor C on Thu Nov 23 12:00:00 SGT 2017 +
+ Schedule is fixed with Morty Smith on Sat Nov 25 20:00:00 SGT 2017 +
+ Schedule is fixed with Laura Teh on Wed Nov 29 17:00:00 SGT 2017]
 
 ==== Deleting appointments
-Commands to type:
+Commands to type: +
+deletesch 1 +
+deleteschedule 3
 
-Expected Results:
+Expected Results: +
+Deleted Schedule: Schedule is fixed with Bernice Yu on Sat Nov 18 18:00:00 SGT 2017 +
+Deleted Schedule: Schedule is fixed with Sandor C on Thu Nov 23 12:00:00 SGT 2017
 
-==== Feature 3
-Commands to type:
+==== Sort All Contacts
+Commands to type: +
+sort +
+st
 
-Expected Results:
+Expected Results: +
+All contacts are sorted alphabetically by name. +
+All contacts are sorted alphabetically by name.
 
-==== Feature 4
-Commands to type:
+==== List
+Commands to type: +
+list +
+l
 
-Expected Results:
+Expected Results: +
+Listed all persons +
+Listed all persons
 
 ==== Feature 5
 Commands to type:
@@ -105,19 +162,27 @@ Expected Results:
 === User Interface Management
 
 ==== Opening Help Window
-Commands to type:
+Commands to type: +
+help +
 
-Expected Results:
+Expected Results: +
+Opened help window.
 
 ==== Switching to and from Home Page
-Commands to type:
+Commands to type: +
+home
 
-Expected Results:
+Expected Results: +
+Welcome Home
 
 ==== Switching between tabs in the Graph Panel
-Commands to type:
+Commands to type: +
+Tab 1 +
+Tab 2
 
-Expected Results:
+Expected Results: +
+Selected Tab: 1 +
+Selected Tab: 2
 
 ==== Feature 4
 Commands to type:
