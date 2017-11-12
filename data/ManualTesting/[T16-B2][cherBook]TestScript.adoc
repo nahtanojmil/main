@@ -286,14 +286,25 @@ Expected Results: +
 Deleted Schedule: Schedule is fixed with Bernice Yu on Sat Nov 18 18:00:00 SGT 2017 +
 Deleted Schedule: Schedule is fixed with Sandor C on Thu Nov 23 12:00:00 SGT 2017
 
-==== Sort All Contacts
-Commands to type: +
-sort +
-st
-
+==== Sorting all cherBook Students
+===== Full Command
+Commands to type: `sort` +
 Expected Results: +
-All contacts are sorted alphabetically by name. +
+```
 All contacts are sorted alphabetically by name.
+```
+===== Using shorthand
+Commands to type: `st` +
+Expected Results:
+```
+All contacts are sorted alphabetically by name.
+```
+===== Case sensitive command
+Commands to type: `SorT` +
+Expected Results:
+```
+`Unknown command`
+```
 
 ==== List
 Commands to type: +
@@ -313,11 +324,18 @@ Expected Results:
 === User Interface Management
 
 ==== Opening Help Window
-Commands to type: +
-help +
-
+===== Full Command
+Commands to type: `help` +
 Expected Results: +
+```
 Opened help window.
+```
+===== Case sensitive command
+Commands to type: `helP` +
+Expected Results:
+```
+`Unknown command`
+```
 
 ==== Switching to and from Home Page
 Commands to type: +
