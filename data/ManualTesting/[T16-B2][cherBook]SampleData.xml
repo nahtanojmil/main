@@ -275,7 +275,7 @@
         <formClass>15APP10</formClass>
         <grades>90.0</grades>
         <postalCode>069541</postalCode>
-        <remark>suffering in studies because of CCA </remark>
+        <remark>suffering in studies because of CCA</remark>
         <tagged>needsHelp</tagged>
         <tagged>Archery</tagged>
     </persons>
@@ -351,8 +351,9 @@
         <formClass>16UNI137</formClass>
         <grades>3000.0</grades>
         <postalCode>123456</postalCode>
-        <remark>Projected valedictorian. 
- Wrote and performed the hit song "Get Schwifty".</remark>
+        <remark>Projected valedictorian.
+            Wrote and performed the hit song "Get Schwifty".
+        </remark>
         <tagged>studentCouncil</tagged>
         <tagged>scholarship</tagged>
         <tagged>ScienceTeam</tagged>
