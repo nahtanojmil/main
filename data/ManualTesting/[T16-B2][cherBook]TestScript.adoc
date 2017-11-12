@@ -95,26 +95,51 @@ Expected Results:
 ```
 Edited Person: John Hoe Phone: 96575688 ParentPhone: 97112211 Email: johnhoe@gmail.com Address: SIS Building 4 Leng Kee Road #03-07 FormClass: 15APP10 Grades: 690.0 PostalCode: 159088 Remark: Head of dance CCA Tags: [studentCouncil][athletics][dance] +
 ```
-//TODO: Fill in the blanks
 ===== Case sensitive command
-Commands to type: `` +
+Commands to type: `edIT 12 f/12SCI24` +
 Expected Results:
 ```
 Unknown command
 ```
 //TODO: Add some Negative test cases
 
-
 ==== Deleting Students
+===== Full Command
 Commands to type:
-delete 40 +
-d 39 +
-d 1
-
-Expected Results: +
+`delete 40` +
+Expected Results:
+```
 Deleted Person: Dany Tar Phone: 81235155 ParentPhone: 97212121 Email: alexyeoh@example.com Address: Stone Street 1, #20-01 FormClass: 11WES01 Grades: 2000.0 PostalCode: 374539 Remark: Top in Class for both English and Literature Tags: [debate][studentCouncil][scholarship] +
+```
+===== Using shorthand
+Commands to type:
+`d 39` +
+Expected Results:
+```
 Deleted Person: Marge Tyrell Phone: 84366478 ParentPhone: 97274444 Email: alexyeoh@example.com Address: High Towers Street 1, #50-01 FormClass: 11WES01 Grades: 1000.0 PostalCode: 374539 Remark: Top in Class for both English and Literature Tags: [debate][studentCouncil][scholarship +
+```
+Commands to type:
+`d 1` +
+Expected Results:
+```
 Deleted Person: Alex Yeoh Phone: 91234563 ParentPhone: 97273111 Email: alexyeoh@example.com Address: Blk 30 Geylang Street 29, #06-40 FormClass: 12SCI23 Grades: 940.0 PostalCode: 123456 Remark: Represented school for national track meet Tags: [track][athletics]
+```
+===== Case sensitive command
+Commands to type: `deleTe 1` +
+Expected Results:
+```
+Unknown command
+```
+===== Index out of bounds
+Commands to type: `list` then `delete 100` +
+Expected Results:
+```
+Listed all persons
+```
+```
+The person index provided is invalid
+```
+//TODO: Add some Negative test cases
 
 ==== Managing Remarks
 Commands to type:
