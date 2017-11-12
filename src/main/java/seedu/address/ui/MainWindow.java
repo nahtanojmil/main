@@ -134,7 +134,6 @@ public class MainWindow extends UiPart<Region> {
         });
     }
 
-    //@@author nahtanojmil
     /**
      * Fills up all the placeholders of this window.
      */

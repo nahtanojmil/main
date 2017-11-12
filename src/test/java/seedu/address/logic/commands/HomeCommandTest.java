@@ -11,9 +11,6 @@ import seedu.address.commons.events.ui.HomeRequestEvent;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.ui.testutil.EventsCollectorRule;
 
-//@@author nahtanojmil
-
-
 public class HomeCommandTest {
 
     @Rule
