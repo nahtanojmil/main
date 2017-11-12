@@ -30,8 +30,24 @@ Expected Results:
 
 ==== Editing Students
 Commands to type:
+edit 2 n/Vernice Yu
+edit 6 p/97971198
+edit 8 pp/97971100
+edit 10 a/Blk 50 Super Street 26, #16-43
+edit 12 f/12SCI24
+e 14 g/ 260
+e 16 c/686868
+e 18 e/johnhoe@gmail.com
 
 Expected Results:
+Edited Person: Vernice Yu Phone: 97971197 ParentPhone: 97271231 Email: berniceyu@example.com Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18 FormClass: 12SCI23 Grades: 530.0 PostalCode: 654321 Remark: Woman Tags: [colleagues][scholarship][canoeing] +
+Edited Person: Roy Balakrishnan Phone: 97971198 ParentPhone: 97112233 Email: royb@example.com Address: Blk 45 Aljunied Street 85, #11-31 FormClass: 12SCI23 Grades: 234.0 PostalCode: 999666 Remark: Mixed ethnicity Tags: [colleagues] +
+Edited Person: Mariam Mohamad Phone: 85215625 ParentPhone: 97971100 Email: mmohd@example.com Address: Blk 6 Home Gardens Street 26, #16-43 FormClass: 12SCI23 Grades: 245.0 PostalCode: 676767 Remark: Studies suffering because of CCA Tags: [needsHelp][dance] +
+Edited Person: Laura Teh Phone: 86542453 ParentPhone: 97272011 Email: laurateh@example.com Address: Blk 50 Super Street 26, #16-43 FormClass: 12SCI23 Grades: 565.0 PostalCode: 676767 Remark: Studies suffering because of CCA Tags: [athletics] +
+Edited Person: Jolene Saram Phone: 85373543 ParentPhone: 97271122 Email: saramjol@example.com Address: Blk 22 Serangoon Drive 26, #16-43 FormClass: 12SCI24 Grades: 895.0 PostalCode: 676767 Remark: Top in class for math Tags: [scienceTeam] +
+Edited Person: Goh Qing Jing Phone: 85473617 ParentPhone: 97272222 Email: gohqingqing@example.com Address: Blk 56 Sungei Bedok 26, #16-43 FormClass: 12SCI23 Grades: 260 PostalCode: 676767 Remark: Class clown Tags: [studentCouncil] +
+Edited Person: Dorothy Thia Phone: 93457384 ParentPhone: 97270021 Email: dorothythia@example.com Address: Blk 457 Wizard drive 26, #16-43 FormClass: 12SCI23 Grades: 295.0 PostalCode: 686868 Remark: Always blur Tags: [studentCouncil] +
+Edited Person: John Hoe Phone: 96575688 ParentPhone: 97112211 Email: johnhoe@gmail.com Address: SIS Building 4 Leng Kee Road #03-07 FormClass: 15APP10 Grades: 690.0 PostalCode: 159088 Remark: Head of dance CCA Tags: [studentCouncil][athletics][dance] +
 
 ==== Deleting Students
 Commands to type:
@@ -40,13 +56,23 @@ Expected Results:
 
 ==== Managing Remarks
 Commands to type:
+remark 5 rm/Has joined soccer +
+rm 20 rm/Quit the Army +
+rm 29 rm/But still a boy
 
 Expected Results:
+Added remark to person: Irfan Ibrahim Phone: 97978789 ParentPhone: 91231211 Email: irfan@example.com Address: Blk 47 Tampines Street 20, #17-35 FormClass: 12SCI23 Grades: 564.0 PostalCode: 999999 Remark: Has joined soccer Tags: [ScienceTeam][sailing] +
+Added remark to person: John Lowe Phone: 96575628 ParentPhone: 97271111 Email: alexyeoh@example.com Address: Blk 876 Lim Chu Kang Street 92 FormClass: 15APP10 Grades: 700.0 PostalCode: 640545 Remark: Quit the army Tags: [studentCouncil][flyingClub][athletics] +
+Added remark to person: Morty Smith Phone: 94157312 ParentPhone: 91231231 Email: alexyeoh@example.com Address: 69 Choa Chu Kang Loop #02-12 FormClass: 16UNI137 Grades: 500.0 PostalCode: 123456 Remark: But still a boy Tags: [band][GameDev][dance]
 
-==== Feature 5
+==== Selecting Student
 Commands to type:
+select 37
+s 19
 
 Expected Results:
+Selected Person: 37 +
+Selected Person: 19
 
 === Schedule Management
 
