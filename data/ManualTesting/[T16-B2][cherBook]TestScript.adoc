@@ -480,12 +480,6 @@ Expected Results: +
 Listed all persons
 ```
 
-==== Feature 5
-Commands to type:
-
-Expected Results:
-
-
 === User Interface Management
 
 ==== Opening Help Window
@@ -529,14 +523,3 @@ Expected Results: +
 ```
 Selected Tab: 2
 ```
-
-
-==== Feature 4
-Commands to type:
-
-Expected Results:
-
-==== Feature 5
-Commands to type:
-
-Expected Results:
