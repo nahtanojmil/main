@@ -61,56 +61,56 @@ Commands to type:
 `edit 2 n/Vernice Yu` +
 Expected Results:
 ```
-Edited Person: Vernice Yu Phone: 97971197 ParentPhone: 97271231 Email: berniceyu@example.com Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18 FormClass: 12SCI23 Grades: 530.0 PostalCode: 654321 Remark: Woman Tags: [colleagues][scholarship][canoeing] +
+Edited Person: Vernice Yu Phone: 97971197 ParentPhone: 97271231 Email: berniceyu@example.com Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18 FormClass: 12SCI23 Grades: 530.0 PostalCode: 654321 Remark: Woman Tags: [colleagues][scholarship][canoeing]
 ```
 ===== Edit Phone
 Commands to type:
 `edit 6 p/97971198` +
 Expected Results:
 ```
-Edited Person: Roy Balakrishnan Phone: 97971198 ParentPhone: 97112233 Email: royb@example.com Address: Blk 45 Aljunied Street 85, #11-31 FormClass: 12SCI23 Grades: 234.0 PostalCode: 999666 Remark: Mixed ethnicity Tags: [colleagues] +
+Edited Person: Roy Balakrishnan Phone: 97971198 ParentPhone: 97112233 Email: royb@example.com Address: Blk 45 Aljunied Street 85, #11-31 FormClass: 12SCI23 Grades: 234.0 PostalCode: 999666 Remark: Mixed ethnicity Tags: [colleagues]
 ```
 ===== Edit Parent's phone
 Commands to type:
 `edit 8 pp/97971100` +
 Expected Results:
 ```
-Edited Person: Mariam Mohamad Phone: 85215625 ParentPhone: 97971100 Email: mmohd@example.com Address: Blk 6 Home Gardens Street 26, #16-43 FormClass: 12SCI23 Grades: 245.0 PostalCode: 676767 Remark: Studies suffering because of CCA Tags: [needsHelp][dance] +
+Edited Person: Mariam Mohamad Phone: 85215625 ParentPhone: 97971100 Email: mmohd@example.com Address: Blk 6 Home Gardens Street 26, #16-43 FormClass: 12SCI23 Grades: 245.0 PostalCode: 676767 Remark: Studies suffering because of CCA Tags: [needsHelp][dance]
 ```
 ===== Edit Address
 Commands to type:
 `edit 10 a/Blk 50 Super Street 26, #16-43` +
 Expected Results:
 ```
-Edited Person: Laura Teh Phone: 86542453 ParentPhone: 97272011 Email: laurateh@example.com Address: Blk 50 Super Street 26, #16-43 FormClass: 12SCI23 Grades: 565.0 PostalCode: 676767 Remark: Studies suffering because of CCA Tags: [athletics] +
+Edited Person: Laura Teh Phone: 86542453 ParentPhone: 97272011 Email: laurateh@example.com Address: Blk 50 Super Street 26, #16-43 FormClass: 12SCI23 Grades: 565.0 PostalCode: 676767 Remark: Studies suffering because of CCA Tags: [athletics]
 ```
 ===== Using shorthand
 Commands to type:
 `edit 12 f/12SCI24` +
 Expected Results:
 ```
-Edited Person: Jolene Saram Phone: 85373543 ParentPhone: 97271122 Email: saramjol@example.com Address: Blk 22 Serangoon Drive 26, #16-43 FormClass: 12SCI24 Grades: 895.0 PostalCode: 676767 Remark: Top in class for math Tags: [scienceTeam] +
+Edited Person: Jolene Saram Phone: 85373543 ParentPhone: 97271122 Email: saramjol@example.com Address: Blk 22 Serangoon Drive 26, #16-43 FormClass: 12SCI24 Grades: 895.0 PostalCode: 676767 Remark: Top in class for math Tags: [scienceTeam]
 ```
 
 Commands to type:
 `e 14 g/ 260` +
 Expected Results:
 ```
-Edited Person: Goh Qing Jing Phone: 85473617 ParentPhone: 97272222 Email: gohqingqing@example.com Address: Blk 56 Sungei Bedok 26, #16-43 FormClass: 12SCI23 Grades: 260 PostalCode: 676767 Remark: Class clown Tags: [studentCouncil] +
+Edited Person: Goh Qing Jing Phone: 85473617 ParentPhone: 97272222 Email: gohqingqing@example.com Address: Blk 56 Sungei Bedok 26, #16-43 FormClass: 12SCI23 Grades: 260 PostalCode: 676767 Remark: Class clown Tags: [studentCouncil]
 ```
 
 Commands to type:
 `e 16 c/686868` +
 Expected Results:
 ```
-Edited Person: Dorothy Thia Phone: 93457384 ParentPhone: 97270021 Email: dorothythia@example.com Address: Blk 457 Wizard drive 26, #16-43 FormClass: 12SCI23 Grades: 295.0 PostalCode: 686868 Remark: Always blur Tags: [studentCouncil] +
+Edited Person: Dorothy Thia Phone: 93457384 ParentPhone: 97270021 Email: dorothythia@example.com Address: Blk 457 Wizard drive 26, #16-43 FormClass: 12SCI23 Grades: 295.0 PostalCode: 686868 Remark: Always blur Tags: [studentCouncil]
 ```
 
 Commands to type:
 `e 18 e/johnhoe@gmail.com` +
 Expected Results:
 ```
-Edited Person: John Hoe Phone: 96575688 ParentPhone: 97112211 Email: johnhoe@gmail.com Address: SIS Building 4 Leng Kee Road #03-07 FormClass: 15APP10 Grades: 690.0 PostalCode: 159088 Remark: Head of dance CCA Tags: [studentCouncil][athletics][dance] +
+Edited Person: John Hoe Phone: 96575688 ParentPhone: 97112211 Email: johnhoe@gmail.com Address: SIS Building 4 Leng Kee Road #03-07 FormClass: 15APP10 Grades: 690.0 PostalCode: 159088 Remark: Head of dance CCA Tags: [studentCouncil][athletics][dance]
 ```
 ===== Case sensitive command
 Commands to type: `edIT 12 f/12SCI24` +
@@ -134,14 +134,14 @@ Commands to type:
 `delete 40` +
 Expected Results:
 ```
-Deleted Person: Dany Tar Phone: 81235155 ParentPhone: 97212121 Email: alexyeoh@example.com Address: Stone Street 1, #20-01 FormClass: 11WES01 Grades: 2000.0 PostalCode: 374539 Remark: Top in Class for both English and Literature Tags: [debate][studentCouncil][scholarship] +
+Deleted Person: Dany Tar Phone: 81235155 ParentPhone: 97212121 Email: alexyeoh@example.com Address: Stone Street 1, #20-01 FormClass: 11WES01 Grades: 2000.0 PostalCode: 374539 Remark: Top in Class for both English and Literature Tags: [debate][studentCouncil][scholarship]
 ```
 ===== Using shorthand
 Commands to type:
 `d 39` +
 Expected Results:
 ```
-Deleted Person: Marge Tyrell Phone: 84366478 ParentPhone: 97274444 Email: alexyeoh@example.com Address: High Towers Street 1, #50-01 FormClass: 11WES01 Grades: 1000.0 PostalCode: 374539 Remark: Top in Class for both English and Literature Tags: [debate][studentCouncil][scholarship +
+Deleted Person: Marge Tyrell Phone: 84366478 ParentPhone: 97274444 Email: alexyeoh@example.com Address: High Towers Street 1, #50-01 FormClass: 11WES01 Grades: 1000.0 PostalCode: 374539 Remark: Top in Class for both English and Literature Tags: [debate][studentCouncil][scholarship]
 ```
 Commands to type:
 `d 1` +
