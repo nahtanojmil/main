@@ -119,7 +119,15 @@ Expected Results:
 Unknown command
 ```
 //TODO: Add some Negative test cases
-
+===== Invalid Parameters
+Commands to type: `edit 15 k/invalid` +
+Expected Results:
+```
+Invalid command format!
+edit: Edits the details of the person identified by the index number used in the last person listing. Existing values will be overwritten by the input values.
+Parameters: INDEX (must be a positive integer) [n/NAME] [p/PHONE] [pp/PARENTPHONE] [e/EMAIL] [a/ADDRESS] [f/FORMCLASS] [g/GRADES] [c/POSTALCODE] [t/TAG]...
+Example: edit 1 p/97979797 pp/97973130 e/johndoe@example.com f/14S14 g/123.0 c/679123
+```
 ==== Deleting Students
 ===== Full Command
 Commands to type:
@@ -156,7 +164,6 @@ Listed all persons
 ```
 The person index provided is invalid
 ```
-//TODO: Add some Negative test cases
 
 ==== Managing Remarks
 Commands to type:
@@ -176,6 +183,20 @@ Expected Results:
 
 ```
 Added remark to person: John Lowe Phone: 96575628 ParentPhone: 97271111 Email: alexyeoh@example.com Address: Blk 876 Lim Chu Kang Street 92 FormClass: 15APP10 Grades: 700.0 PostalCode: 640545 Remark: Quit the army Tags: [studentCouncil][flyingClub][athletics] +
+```
+===== Adding with no input
+Commands to type:
+`rm 23 rm/` +
+
+Expected Results:
+```
+Removed remark from person: Bruno Mas Phone: 97973322 ParentPhone: 97111011 Email: alexyeoh@example.com Address: 10 Biopolis Way #03-03/04 CHROMOS FormClass: 16MUS20 Grades: 979.0 PostalCode: 123456 Remark: (add a remark) Tags: [studentCouncil][band][dance]
+```
+===== Case Sensitive Command
+Commands to type: `REMarK 2 rm/invalid` +
+Expected Results:
+```
+Unknown command
 ```
 
 ==== Listing all Students
