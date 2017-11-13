@@ -313,55 +313,98 @@ Example: findtags friends owesMoney` +
 
 
 === Schedule Management
+[NOTE]
+Adding, Viewing and Deleting schedules is to be followed sequentially.
 
 ==== Add appointments
-Commands to type: +
-addsch 2 s/18 november 6pm +
-addsch 25 s/19 november 2pm +
-addsch 26 s/19 november 6pm +
-addsch 35 s/11-23-2017 12pm +
-addschedule 29 s/25 november 8pm +
-addschedule 10 s/11-29-2017 5pm +
-addschedule 6 s/christmas 2pm +
-
-Expected Results: +
-Added Bernice Yu to consultations schedule on Sat Nov 18 18:00:00 SGT 2017. +
-Use 'viewsch' or 'viewschedule' command to view all your schedules. +
-Added Chris Mar to consultations schedule on Sun Nov 19 14:00:00 SGT 2017. +
-Use 'viewsch' or 'viewschedule' command to view all your schedules. +
-Added Fred Mer to consultations schedule on Sun Nov 19 18:00:00 SGT 2017. +
-Use 'viewsch' or 'viewschedule' command to view all your schedules. +
-Added Sandor C to consultations schedule on Thu Nov 23 12:00:00 SGT 2017. +
-Use 'viewsch' or 'viewschedule' command to view all your schedules. +
-Added Morty Smith to consultations schedule on Sat Nov 25 20:00:00 SGT 2017. +
-Use 'viewsch' or 'viewschedule' command to view all your schedules. +
-Added Laura Teh to consultations schedule on Wed Nov 29 17:00:00 SGT 2017. +
-Use 'viewsch' or 'viewschedule' command to view all your schedules. +
-Added Roy Balakrishnan to consultations schedule on Mon Dec 25 14:00:00 SGT 2017. +
+Commands to type: `addschedule 29 s/25 november 8pm` +
+Expected Results:
+```
+Added Morty Smith to consultations schedule on Sat Nov 25 20:00:00 SGT 2017.
 Use 'viewsch' or 'viewschedule' command to view all your schedules.
+```
+===== Using shorthand
+Commands to type: `addsch 2 s/26 november 6pm` +
+Expected Results:
+```
+Added Bernice Yu to consultations schedule on Sun Nov 26 18:00:00 SGT 2017.
+Use 'viewsch' or 'viewschedule' command to view all your schedules.
+```
+===== Using Natural Language Parsing
+Commands to type: `addschedule 6 s/christmas 2pm` +
+Expected Results:
+```
+Added Roy Balakrishnan to consultations schedule on Mon Dec 25 14:00:00 SGT 2017.
+Use 'viewsch' or 'viewschedule' command to view all your schedules.
+```
+===== Wrong Command Format (No arguments)
+Commands to type: `addsch 5 s/` +
+Expected Results:
+```
+Invalid command format!
+addschedule: Schedules the selected indexed person to a consultation timeslot.
+Parameters: INDEX (must be a positive integer)
+Example: addschedule 1 s/tomorrow 6.30pm
+```
+===== Wrong Command Format (Unparseable string)
+Commands to type: `addsch 5 s/this string is not parseable` +
+Expected Results:
+```
+Invalid command format!
+addschedule: Schedules the selected indexed person to a consultation timeslot.
+Parameters: INDEX (must be a positive integer)
+Example: addschedule 1 s/tomorrow 6.30pm
+```
 
 ==== Viewing appointments
-Commands to type: +
-viewsch +
-viewschedule
+===== Using Schedule
+Commands to type: `viewschedule` +
+Expected Results:
+```
+Listed your schedule.
+[Schedule is fixed with Morty Smith on Sat Nov 25 20:00:00 SGT 2017
+ Schedule is fixed with Bernice Yu on Sun Nov 26 18:00:00 SGT 2017
+ Schedule is fixed with Roy Balakrishnan on Mon Dec 25 14:00:00 SGT 2017]
+```
 
-Expected Results: +
-Listed your schedule. +
-[Schedule is fixed with Bernice Yu on Sat Nov 18 18:00:00 SGT 2017 +
- Schedule is fixed with Chris Mar on Sun Nov 19 14:00:00 SGT 2017 +
- Schedule is fixed with Fred Mer on Sun Nov 19 18:00:00 SGT 2017 +
- Schedule is fixed with Sandor C on Thu Nov 23 12:00:00 SGT 2017 +
- Schedule is fixed with Morty Smith on Sat Nov 25 20:00:00 SGT 2017 +
- Schedule is fixed with Laura Teh on Wed Nov 29 17:00:00 SGT 2017]
+===== Using shorthand
+Commands to type: `viewsch` +
+Expected Results:
+```
+Listed your schedule.
+[Schedule is fixed with Morty Smith on Sat Nov 25 20:00:00 SGT 2017
+ Schedule is fixed with Bernice Yu on Sun Nov 26 18:00:00 SGT 2017
+ Schedule is fixed with Roy Balakrishnan on Mon Dec 25 14:00:00 SGT 2017]
+```
 
 ==== Deleting appointments
-Commands to type: +
-deletesch 1 +
-deleteschedule 3
-
-Expected Results: +
-Deleted Schedule: Schedule is fixed with Bernice Yu on Sat Nov 18 18:00:00 SGT 2017 +
-Deleted Schedule: Schedule is fixed with Sandor C on Thu Nov 23 12:00:00 SGT 2017
+===== Delete with single index
+Commands to type: `deleteschedule 1` +
+Expected Results:
+```
+Deleted Schedule: Schedule is fixed with Morty Smith on Sat Nov 25 20:00:00 SGT 2017
+```
+===== Using shorthand
+Commands to type: `deletesch 1` +
+Expected Results:
+```
+Deleted Schedule: Schedule is fixed with Bernice Yu on Sun Nov 26 18:00:00 SGT 2017
+```
+===== Index out of bounds
+Commands to type: `deleteschedule 100` +
+Expected Results:
+```
+The schedule index provided is invalid
+```
+===== Index Zero
+Commands to type: `deletesch 0` +
+Expected Results:
+```
+Invalid command format!
+deleteschedule: Deletes the schedule identified by the index number.
+Parameters: INDEX (must be a positive integer)
+Example: deleteschedule 1
+```
 
 ==== Sorting all cherBook Students
 ===== Full Command
