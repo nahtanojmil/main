@@ -523,3 +523,19 @@ Expected Results: +
 ```
 Selected Tab: 2
 ```
+== known Bugs
+
+=== Deleting wrong person
+Commands to type: +
+`find david` +
+`delete 1` +
+`list` +
+`undo` +
+`redo`
+
+Expected Results: +
+`1 persons listed!` +
+`Deleted Person: David Li Phone: 85473617 ParentPhone: 91113011 Email: lidavid@example.com Address: Blk 436 Serangoon Gardens Street 26, #16-43 FormClass: 12SCI23 Grades: 245.0 PostalCode: 676767 Remark: Studies suffering because of CCA Tags: [needsHelp][studentCouncil]` +
+`Listed all persons` +
+`Undo success!` (David is back in the list) +
+`Redo success!` (First person in the list is deleted, not david who is the third)
