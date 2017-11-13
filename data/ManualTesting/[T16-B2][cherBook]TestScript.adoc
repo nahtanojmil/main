@@ -13,13 +13,22 @@ endif::[]
 
 By: `CS2103AUG2017 T16-B2`      Since: `Sep 2017`      Licence: `MIT`
 
-== How to load the Sample Data
+== How to load the Sample Data into cherBook
+.  Ensure you have Java version `1.8.0_60` or later versions installed on your Computer.
++
+[NOTE]
+Having any Java 8 version is not enough. +
+This app will not work with earlier versions of Java 8. +
 
-. Go to `{project root}\src\test\data\ManualTesting`
-. Copy the `[T16-B2][cherBook]SampleData.xml` file.
-. Paste the copied file inside `{project root}\src\test\data`.
-. Rename the file to `addressbook.xml` in all lower case.
-. The Sample data is now loaded and ready for testing.
+. Download the latest `cherBook.jar` link:{repoURL}/releases[here].
+. Create a folder you want to use as the home folder for your `cherBook`.
+. Copy the `cherBook.jar` file to the home folder.
+. Create a folder named `data` inside the home folder.
+. Rename the `[T16-B2][cherBook]SampleData.xml` file  to `addressbook.xml` in all lower case.
+. Copy the `addressbook.xml` file and paste it inside the `data` folder.
+. The sample data is now loaded and ready for testing.
+. Double-click the `cherBook.jar` file to start the app. The sample data should appear in a few seconds.
+
 
 The Sample Data contains 40 students, 24 different tags and 7 appointments in the schedule.
 
