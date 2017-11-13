@@ -37,17 +37,24 @@ Expected Results:
 New person added: Kelly Doe Phone: 97979999 ParentPhone: 97302222 Email: kellyd@example.com Address: 665, Tampines Ave 56, #05-16 FormClass: 12S23 Grades: 123.0 PostalCode: 673349 Remark: (add a remark) Tags: [judo][track]
 ```
 ===== Using shorthand
-Commands to type: `a n/Kimmy Koh p/97979222 pp/97302223 e/kimmyk@gmail.com a/311, Hougang St 2, #08-14 f/12S23 g/123.0 c/673349 t/dance t/scienceTeam`
+Commands to type: `a n/Kimmy Koh p/97979222 pp/97302223 e/kimmyk@gmail.com a/311, Hougang St 2, #08-14 f/12S23 g/123.0 c/673349 t/dance t/scienceTeam` +
 Expected Results:
 ```
 New person added: Kimmy Koh Phone: 97979222 ParentPhone: 97302223 Email: kimmyk@gmail.com Address: 311, Hougang St 2, #08-14 FormClass: 12S23 Grades: 123.0 PostalCode: 673349 Remark: (add a remark) Tags: [dance][scienceTeam]
 ```
-===== Using optional inputs
-Commands to type: `add n/Zinc Nayer p/97971234 pp/97301122 e/zincnayer@example.com f/12S23 g/123.0 t/track t/fashion`
+==== Adding Students without optional inputs
+Commands to type: `add n/Zinc Nayer pp/97301122 e/zincnayer@example.com f/12S23 g/123.0 t/track t/fashion` +
 Expected Results:
 ```
-New person added: Zinc Nayer Phone: 97971234 ParentPhone: 97301122 Email: zincnayer@example.com Address: (Address not recorded) FormClass: 12S23 Grades: 123.0 PostalCode: (Postal code not recorded) Remark: (add a remark) Tags: [track][fashion]
+New person added: Zinc Nayer Phone: (Student phone not recorded) ParentPhone: 97301122 Email: zincnayer@example.com Address: (Address not recorded) FormClass: 12S23 Grades: 123.0 PostalCode: (Postal code not recorded) Remark: (add a remark) Tags: [track][fashion]
 ```
+===== Using shorthand
+Commands to type: `a n/Zinc Nayer pp/97301122 e/zincnayer@example.com f/12S23 g/123.0 t/track t/fashion` +
+Expected Results:
+```
+New person added: Zinc Nayer Phone: (Student phone not recorded) ParentPhone: 97301122 Email: zincnayer@example.com Address: (Address not recorded) FormClass: 12S23 Grades: 123.0 PostalCode: (Postal code not recorded) Remark: (add a remark) Tags: [track][fashion]
+```
+
 ==== Editing Students
 ===== Edit Name
 Commands to type:
@@ -153,14 +160,23 @@ The person index provided is invalid
 
 ==== Managing Remarks
 Commands to type:
-remark 5 rm/Has joined soccer +
-rm 20 rm/Quit the Army +
-rm 29 rm/But still a boy
+`remark 5 rm/Has joined soccer` +
 
 Expected Results:
-Added remark to person: Irfan Ibrahim Phone: 97978789 ParentPhone: 91231211 Email: irfan@example.com Address: Blk 47 Tampines Street 20, #17-35 FormClass: 12SCI23 Grades: 564.0 PostalCode: 999999 Remark: Has joined soccer Tags: [ScienceTeam][sailing] +
+
+```
+Added remark to person: Irfan Ibrahim Phone: 97978789 ParentPhone: 91231211 Email: irfan@example.com Address: Blk 47 Tampines Street 20, #17-35 FormClass: 12SCI23 Grades: 564.0 PostalCode: 999999 Remark: Has joined soccer Tags: [ScienceTeam][sailing]
+```
+
+===== Using shorthand
+Commands to type:
+`rm 20 rm/Quit the Army` +
+
+Expected Results:
+
+```
 Added remark to person: John Lowe Phone: 96575628 ParentPhone: 97271111 Email: alexyeoh@example.com Address: Blk 876 Lim Chu Kang Street 92 FormClass: 15APP10 Grades: 700.0 PostalCode: 640545 Remark: Quit the army Tags: [studentCouncil][flyingClub][athletics] +
-Added remark to person: Morty Smith Phone: 94157312 ParentPhone: 91231231 Email: alexyeoh@example.com Address: 69 Choa Chu Kang Loop #02-12 FormClass: 16UNI137 Grades: 500.0 PostalCode: 123456 Remark: But still a boy Tags: [band][GameDev][dance]
+```
 
 ==== Listing all Students
 ===== Full Command
@@ -467,19 +483,32 @@ Expected Results:
 
 ==== Switching to and from Home Page
 Commands to type: +
-home
+`home`
 
 Expected Results: +
+
+```
 Welcome Home
+```
 
 ==== Switching between tabs in the Graph Panel
 Commands to type: +
-Tab 1 +
-Tab 2
+`Tab 1`
 
 Expected Results: +
-Selected Tab: 1 +
+
+```
+Selected Tab: 1
+```
+
+Commands to type: +
+`Tab 2`
+
+Expected Results: +
+```
 Selected Tab: 2
+```
+
 
 ==== Feature 4
 Commands to type:
