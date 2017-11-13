@@ -39,6 +39,9 @@ Follow the instructions below to test cherbook's features.
 === Student Management
 
 ==== Adding Students
+[IMPORTANT]
+Undo all previous commands or reload the cherBook sample data to reset the cherBook to the original state before moving on to other test.
+
 ===== Full Command
 Commands to type: `add n/Kelly Doe p/97979999 pp/97302222 e/kellyd@example.com a/665, Tampines Ave 56, #05-16 f/12S23 g/123.0 c/673349 t/track t/judo` +
 Expected Results:
@@ -65,6 +68,9 @@ New person added: Zinc Nayer Phone: (Student phone not recorded) ParentPhone: 97
 ```
 
 ==== Editing Students
+[IMPORTANT]
+Undo all previous commands or reload the cherBook sample data to reset the cherBook to the original state before moving on to other test.
+
 ===== Edit Name
 Commands to type:
 `edit 2 n/Vernice Yu` +
@@ -127,7 +133,6 @@ Expected Results:
 ```
 Unknown command
 ```
-//TODO: Add some Negative test cases
 ===== Invalid Parameters
 Commands to type: `edit 15 k/invalid` +
 Expected Results:
@@ -138,6 +143,9 @@ Parameters: INDEX (must be a positive integer) [n/NAME] [p/PHONE] [pp/PARENTPHON
 Example: edit 1 p/97979797 pp/97973130 e/johndoe@example.com f/14S14 g/123.0 c/679123
 ```
 ==== Deleting Students
+[IMPORTANT]
+Undo all previous commands or reload the cherBook sample data to reset the cherBook to the original state before moving on to other test.
+
 ===== Full Command
 Commands to type:
 `delete 40` +
@@ -175,6 +183,10 @@ The person index provided is invalid
 ```
 
 ==== Managing Remarks
+[IMPORTANT]
+Undo all previous commands or reload the cherBook sample data to reset the cherBook to the original state before moving on to other test.
+
+===== Full Command
 Commands to type:
 `remark 5 rm/Has joined soccer` +
 
@@ -209,6 +221,9 @@ Unknown command
 ```
 
 ==== Listing all Students
+[IMPORTANT]
+Undo all previous commands or reload the cherBook sample data to reset the cherBook to the original state before moving on to other test.
+
 ===== Full Command
 Commands to type: `list`    +
 Expected Results:
@@ -229,6 +244,9 @@ Unknown command
 ```
 
 ==== Selecting Student
+[IMPORTANT]
+Undo all previous commands or reload the cherBook sample data to reset the cherBook to the original state before moving on to other test.
+
 ===== Full Command
 Commands to type: `list` then `select 37` +
 Expected Results:
@@ -372,6 +390,9 @@ Example: findtags friends owesMoney` +
 [NOTE]
 Adding, Viewing and Deleting schedules is to be followed sequentially.
 
+[IMPORTANT]
+Undo all previous commands or reload the cherBook sample data to reset the cherBook to the original state before moving on to other test.
+
 ==== Add appointments
 Commands to type: `addschedule 29 s/25 november 8pm` +
 Expected Results:
@@ -463,6 +484,9 @@ Example: deleteschedule 1
 ```
 
 ==== Sorting all cherBook Students
+[IMPORTANT]
+Undo all previous commands or reload the cherBook sample data to reset the cherBook to the original state before moving on to other test.
+
 ===== Full Command
 Commands to type: `sort` +
 Expected Results: +
@@ -532,7 +556,9 @@ Expected Results: +
 ```
 Selected Tab: 2
 ```
-== known Bugs
+== List of known Bugs
+[IMPORTANT]
+Undo all previous commands or reload the cherBook sample data to reset the cherBook to the original state before moving on to other test.
 
 === Deleting wrong person
 Commands to type: +
@@ -542,9 +568,21 @@ Commands to type: +
 `undo` +
 `redo`
 
-Expected Results: +
-`1 persons listed!` +
-`Deleted Person: David Li Phone: 85473617 ParentPhone: 91113011 Email: lidavid@example.com Address: Blk 436 Serangoon Gardens Street 26, #16-43 FormClass: 12SCI23 Grades: 245.0 PostalCode: 676767 Remark: Studies suffering because of CCA Tags: [needsHelp][studentCouncil]` +
-`Listed all persons` +
-`Undo success!` (David is back in the list) +
-`Redo success!` (First person in the list is deleted, not david who is the third)
+Expected Results:
+```
+1 persons listed!
+```
+```
+Deleted Person: David Li Phone: 85473617 ParentPhone: 91113011 Email: lidavid@example.com Address: Blk 436 Serangoon Gardens Street 26, #16-43 FormClass: 12SCI23 Grades: 245.0 PostalCode: 676767 Remark: Studies suffering because of CCA Tags: [needsHelp][studentCouncil]
+```
+```
+Listed all persons
+```
+```
+Undo success!
+```
+Since David is back in the list
+```
+Redo success!
+```
+First person in the list is deleted, not david who is the third
