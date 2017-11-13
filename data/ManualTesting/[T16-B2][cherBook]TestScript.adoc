@@ -29,15 +29,25 @@ Follow the instructions below to test cherbook's features.
 
 === Student Management
 
-==== Adding Students (With / Without optional inputs)
-Commands to type:
-add n/Kelly Doe p/97979999 pp/97302222 e/kellyd@example.com a/665, Tampines Ave 56, #05-16 f/12S23 g/123.0 c/673349 t/track t/judo +
-a n/Zinc Nayer p/97971234 pp/97301122 e/zincnayer@example.com f/12S23 g/123.0 t/track t/fashion
-
+==== Adding Students
+===== Full Command
+Commands to type: `add n/Kelly Doe p/97979999 pp/97302222 e/kellyd@example.com a/665, Tampines Ave 56, #05-16 f/12S23 g/123.0 c/673349 t/track t/judo` +
 Expected Results:
-New person added: Kelly Doe Phone: 97979999 ParentPhone: 97302222 Email: kellyd@example.com Address: 665, Tampines Ave 56, #05-16 FormClass: 12S23 Grades: 123.0 PostalCode: 673349 Remark: (add a remark) Tags: [judo][track] +
+```
+New person added: Kelly Doe Phone: 97979999 ParentPhone: 97302222 Email: kellyd@example.com Address: 665, Tampines Ave 56, #05-16 FormClass: 12S23 Grades: 123.0 PostalCode: 673349 Remark: (add a remark) Tags: [judo][track]
+```
+===== Using shorthand
+Commands to type: `a n/Kimmy Koh p/97979222 pp/97302223 e/kimmyk@gmail.com a/311, Hougang St 2, #08-14 f/12S23 g/123.0 c/673349 t/dance t/scienceTeam`
+Expected Results:
+```
+New person added: Kimmy Koh Phone: 97979222 ParentPhone: 97302223 Email: kimmyk@gmail.com Address: 311, Hougang St 2, #08-14 FormClass: 12S23 Grades: 123.0 PostalCode: 673349 Remark: (add a remark) Tags: [dance][scienceTeam]
+```
+===== Using optional inputs
+Commands to type: `add n/Zinc Nayer p/97971234 pp/97301122 e/zincnayer@example.com f/12S23 g/123.0 t/track t/fashion`
+Expected Results:
+```
 New person added: Zinc Nayer Phone: 97971234 ParentPhone: 97301122 Email: zincnayer@example.com Address: (Address not recorded) FormClass: 12S23 Grades: 123.0 PostalCode: (Postal code not recorded) Remark: (add a remark) Tags: [track][fashion]
-
+```
 ==== Editing Students
 ===== Edit Name
 Commands to type:
@@ -419,21 +429,19 @@ Expected Results:
 ```
 All contacts are sorted alphabetically by name.
 ```
-===== Case sensitive command
-Commands to type: `SorT` +
+==== Listing all cherBook Students
+===== Full Command
+Commands to type: `list` +
 Expected Results:
 ```
-`Unknown command`
-```
-
-==== List
-Commands to type: +
-list +
-l
-
-Expected Results: +
-Listed all persons +
 Listed all persons
+```
+===== Using shorthand
+Commands to type: `l`
+Expected Results: +
+```
+Listed all persons
+```
 
 ==== Feature 5
 Commands to type:
